@@ -126,7 +126,7 @@ function stepHTML(guide, step, place) {
     ${options.length ? `<fieldset class="choices">${options.map(o =>
       `<label><input type="checkbox" data-option="${o.id}"><span>${escape(o.label)}${o.detail ? `<small>${escape(o.detail)}</small>` : ''}</span></label>`).join('')}</fieldset>` : ''}
     ${step.warning ? `<p class="warning">${inline(step.warning)}</p>` : ''}
-    ${step.parts?.length ? `<div class="parts"><h4>Comes out · into the box for step <span class="box"></span> on your sheet</h4><ul>${step.parts.map(p => `<li>${partLine(p)}</li>`).join('')}</ul></div>` : ''}
+    ${step.parts?.length ? `<div class="parts"><h4>Comes out · onto the spot marked step <span class="box"></span></h4><ul>${step.parts.map(p => `<li>${partLine(p)}</li>`).join('')}</ul></div>` : ''}
     ${step.check ? `<p class="check">Done when: ${inline(step.check)}</p>` : ''}
     </div>
   </article>`;
@@ -161,7 +161,8 @@ function render(guide, state) {
   document.title = guide.title;
   document.body.innerHTML = `
     <aside>
-      <div class="head"><p class="guide-title">${escape(guide.title)}</p><p class="progress"></p>
+      <div class="head"><button class="steps-toggle" type="button" aria-label="Show the steps">Steps</button>
+        <p class="guide-title">${escape(guide.title)}</p><p class="progress"></p>
         <div class="pages"><a class="row overview-row" href="#overview">Overview, sources and credits</a></div></div>
       <nav>${listHTML(guide)}</nav>
       <footer class="bar">
@@ -203,6 +204,8 @@ function render(guide, state) {
       const count = pictures.querySelectorAll('figure').length;
       showPicture(pictures, (Number(picture.closest('figure').dataset.picture) + 1) % count);
     }
+    if (event.target.closest('.steps-toggle')) return document.body.classList.toggle('list-open');
+    if (event.target.closest('nav a, .pages a')) document.body.classList.remove('list-open');
     const copy = event.target.closest('.copy');
     if (copy) {
       navigator.clipboard?.writeText(copy.previousElementSibling.textContent);

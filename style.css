@@ -83,8 +83,10 @@ main > article > h1, .section-name, .pictures { flex-shrink: 0; }
 .section-name { margin: 0 0 6px; color: var(--faint); font-size: 0.85rem; }
 .summary { color: var(--soft); font-size: 1.1rem; }
 .needs { columns: 2; column-gap: 28px; padding-left: 18px; margin: 0; }
-.cautions { list-style: none; padding: 0; margin: 24px 0 0; border-left: 3px solid var(--warn); }
-.cautions li { padding: 2px 0 2px 14px; color: var(--warn); }
+.cautions { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 8px; }
+.cautions li { display: flex; gap: 10px; padding: 11px 14px; border-radius: 9px; color: var(--warn);
+  background: color-mix(in srgb, var(--warn) 9%, transparent); border: 1px solid color-mix(in srgb, var(--warn) 28%, transparent); }
+.cautions li::before { content: "⚠"; flex-shrink: 0; }
 .pictures { margin-bottom: 20px; }
 figure { margin: 0; }
 figure img { display: block; width: 100%; max-height: 44vh; object-fit: contain; border-radius: 10px; background: var(--tint); }
@@ -172,14 +174,29 @@ figure:not([hidden]) { animation: fade 0.3s ease both; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
+/* Tablets and phones: the list folds into a bar across the top, opened by Steps; the step takes the full width. */
+.steps-toggle { display: none; }
+@media (max-width: 1024px) {
+  aside { top: 10px; left: 10px; right: 10px; width: auto; max-height: calc(100vh - 20px); }
+  .head { padding: 12px 14px 10px; display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: center; }
+  .head .guide-title { grid-column: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.95rem; }
+  .head .progress { grid-column: 1; margin: 0; }
+  .steps-toggle { display: block; grid-column: 2; grid-row: 1 / span 2; font: 600 0.88rem/1 -apple-system, system-ui, sans-serif;
+    color: var(--ink); background: var(--tint); border: 1px solid var(--line); border-radius: 8px; padding: 9px 14px; cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.12s ease; }
+  .steps-toggle:active { transform: scale(0.96); }
+  .list-open .steps-toggle { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .pages, nav { display: none; }
+  .list-open .pages { display: block; grid-column: 1 / -1; }
+  .list-open nav { display: block; max-height: 60vh; animation: fade 0.25s ease both; }
+  .bar { padding: 8px 14px 10px; }
+  main { padding: 118px 24px 0; max-width: none; }
+  .code pre { white-space: pre-wrap; word-break: break-all; }
+}
 @media (max-width: 760px) {
-  aside { top: 10px; left: 10px; width: min(var(--side), calc(100vw - 20px)); max-height: calc(100vh - 20px); }
-  aside { position: static; width: auto; max-height: 45vh; margin: 10px; }
-  main { padding: 16px 16px 0; height: auto; display: block; }
-  main > article { display: block; }
-  .body { overflow: visible; mask-image: none; }
-  figure img { max-height: 60vh; }
-  .way { position: sticky; bottom: 0; background: var(--paper); }
+  main { padding: 112px 14px 0; }
   .step h1 { font-size: 1.35rem; }
   .needs, .parts ul { columns: 1; }
+  figure img, .video .play img, .video iframe { max-height: 34vh; }
+  .labels { display: none; }
 }

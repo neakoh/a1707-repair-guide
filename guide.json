@@ -13,10 +13,10 @@
   "Opening picks",
   "Suction cup",
   "Hair dryer (not a heat gun)",
-  "A sheet of paper and a pen, for the screws (or a magnetic mat)"
+  "A magnetic project mat for the screws (recommended), or half sheets of A4 and a pen"
  ],
  "cautions": [
-  "Keep every screw: as each step takes screws out, put them in a box on the sheet marked with that step's number. They go back in reverse, from the same boxes.",
+  "Keep every screw: as each step takes screws out, put them in their own labelled spot, marked with that step's number. They go back in reverse, from the same spots.",
   "Touch ID only works with the original logic board. A torn ribbon kills it permanently.",
   "Battery power connector off before touching anything else.",
   "Never mix screws: several sizes differ by 0.1 mm."
@@ -49,11 +49,11 @@
    "images": []
   },
   {
-   "title": "Set up a sheet for the screws",
-   "text": "Lay a sheet of paper next to the laptop. Each time a step takes screws out, draw a box for it, write the step number and the screw length in it, and put the screws in that box. Steps with two lengths get two boxes.\n\n**Why:** Many screws look the same but differ by a fraction of a millimetre. A screw that is too long can drill through the board underneath. The boxes show where each one came from. Work back through them in reverse to rebuild.",
+   "title": "Set up a place for the screws",
+   "text": "A **magnetic project mat** is best: screws stay where they're put, and the surface can be written on. Without one, use **half sheets of A4**, one per step that takes screws out.\n\nEach time a step takes screws out, mark a spot on the mat or a half sheet with the step number and the screw lengths, and put the screws on it. Steps with two lengths get two marked spots.\n\n**Why:** Many screws look the same but differ by a fraction of a millimetre. A screw that is too long can drill through the board underneath. The marked spots show where each one came from; work back through them in reverse to rebuild.",
    "warning": "Several sizes differ by 0.1–0.2 mm. A long screw in a short hole punches through the board.",
    "section": "Taking it apart",
-   "check": "Paper and pen beside the laptop.",
+   "check": "Mat or half sheets and a pen beside the laptop.",
    "images": []
   },
   {
@@ -1319,7 +1319,7 @@
   },
   {
    "title": "Fit the remaining six logic board screws",
-   "text": "Fit the other six:\n\n- **T5 2.9 mm ×5**\n- **T5 3.7 mm ×1** (right edge)\n\nThen tighten all ten.\n\nThe screws are in the box for **step 27** of Taking it apart.",
+   "text": "Fit the other six:\n\n- **T5 2.9 mm ×5**\n- **T5 3.7 mm ×1** (right edge)\n\nThen tighten all ten.\n\nThe screws are in the spot for **step 27** of Taking it apart.",
    "images": [
     {
      "url": "maps/logic-board-rest.svg",
@@ -1334,7 +1334,7 @@
    "title": "Refit the antenna bundle clip",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Press the three plugs flat once more, then fit the clip over the bundle: **T5 2.9 mm ×1**.\n\nThe screws are in the box for **step 26** of Taking it apart.",
+   "text": "Press the three plugs flat once more, then fit the clip over the bundle: **T5 2.9 mm ×1**.\n\nThe screws are in the spot for **step 26** of Taking it apart.",
    "images": [
     {
      "url": "maps/antenna-bundle.svg",
@@ -1355,7 +1355,7 @@
    "title": "Refit the Touch Bar display bracket",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the box for **step 22** of Taking it apart.",
+   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the spot for **step 22** of Taking it apart.",
    "images": [
     {
      "url": "maps/touchbar-display.svg",
@@ -1376,7 +1376,7 @@
    "title": "Refit the Touch Bar digitizer bracket",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Slide the bracket back under its slotted tab with tweezers, then fit **T3 1.3 mm ×1**.\n\nThe screws are in the box for **step 21** of Taking it apart.",
+   "text": "Slide the bracket back under its slotted tab with tweezers, then fit **T3 1.3 mm ×1**.\n\nThe screws are in the spot for **step 21** of Taking it apart.",
    "images": [
     {
      "url": "maps/digitizer.svg",
@@ -1397,7 +1397,7 @@
    "title": "Refit the Touch ID and headphone bracket",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Press both connectors flat once more, then fit the shared bracket: **T3 2.4 mm ×2**.\n\nThe screws are in the box for **step 19** of Taking it apart.",
+   "text": "Press both connectors flat once more, then fit the shared bracket: **T3 2.4 mm ×2**.\n\nThe screws are in the spot for **step 19** of Taking it apart.",
    "images": [
     {
      "url": "maps/touchid-bracket.svg",
@@ -1416,7 +1416,7 @@
   },
   {
    "title": "Refit both hinge covers",
-   "text": "Fit the hinge covers: **T3 2.0 mm ×4**, two per hinge.\n\nThe screws are in the box for **step 18** of Taking it apart.",
+   "text": "Fit the hinge covers: **T3 2.0 mm ×4**, two per hinge.\n\nThe screws are in the spot for **step 18** of Taking it apart.",
    "images": [
     {
      "url": "maps/hinge-covers-2.svg",
@@ -1439,7 +1439,7 @@
    "title": "Refit the display flex bracket and cover",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Fit the bracket (**T3 1.7 mm ×2**), then the cover over it (**T3 3.5 mm ×2**).\n\nThe screws are in the box for **step 17** of Taking it apart.",
+   "text": "Fit the bracket (**T3 1.7 mm ×2**), then the cover over it (**T3 3.5 mm ×2**).\n\nThe screws are in the spot for **step 17** of Taking it apart.",
    "images": [
     {
      "url": "maps/display-flex-2.svg",
@@ -1460,7 +1460,7 @@
    "title": "Refit the keyboard bracket",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the box for **step 16** of Taking it apart.",
+   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the spot for **step 16** of Taking it apart.",
    "images": [
     {
      "url": "maps/keyboard.svg",
@@ -1481,7 +1481,7 @@
    "title": "Refit the trackpad bracket",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the box for **step 12** of Taking it apart.",
+   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the spot for **step 12** of Taking it apart.",
    "images": [
     {
      "url": "maps/trackpad-cable.svg",
@@ -1531,7 +1531,7 @@
    "title": "Finished",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "The machine is back together in its new top case, with the original Touch ID still working.\n\n- The screw sheet should now be empty. If a box still has any, find the step it belongs to before using the laptop.\n- The old top case keeps the parts that stayed behind. Recycle it, ideally its battery separately at a battery drop-off.\n\n**Thanks to** iFixit for the take-apart guides and photos this is built on (CC BY-NC-SA 3.0), and LaptopScreen.com for the video the Touch ID transfer follows. The full list is under Overview, sources and credits.\n\n**Help extend this guide.** Steps for shells that arrive without some parts fitted, and corrections, are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
+   "text": "The machine is back together in its new top case, with the original Touch ID still working.\n\n- The mat or sheets should now be empty of screws. If a box still has any, find the step it belongs to before using the laptop.\n- The old top case keeps the parts that stayed behind. Recycle it, ideally its battery separately at a battery drop-off.\n\n**Thanks to** iFixit for the take-apart guides and photos this is built on (CC BY-NC-SA 3.0), and LaptopScreen.com for the video the Touch ID transfer follows. The full list is under Overview, sources and credits.\n\n**Help extend this guide.** Steps for shells that arrive without some parts fitted, and corrections, are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
    "check": "Laptop working, sheet empty.",
    "images": []
   }
