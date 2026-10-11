@@ -179,7 +179,7 @@ figure:not([hidden]) { animation: fade 0.3s ease both; }
 @media (max-width: 1024px) {
   aside { top: auto; bottom: 10px; left: 10px; right: 10px; width: auto; max-height: calc(100vh - 20px); }
   main > .way { display: none; }
-  .way.in-list { display: flex; padding: 4px 14px 14px; }
+  .way.in-list { display: flex; justify-content: space-between; padding: 4px 14px 14px; }
   .head { padding: 12px 14px 10px; display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: center; }
   .head .guide-title { grid-column: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.95rem; }
   .head .progress { grid-column: 1; margin: 0; }
