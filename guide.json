@@ -1352,21 +1352,21 @@
    "check": "Bracket on, all its screws in."
   },
   {
-   "title": "Refit the Touch ID and headphone bracket",
+   "title": "Refit the Touch Bar display bracket",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Press both connectors flat once more, then fit the shared bracket: **T3 2.4 mm ×2**.\n\nThe screws are in the box for **step 19** of Taking it apart.",
+   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the box for **step 22** of Taking it apart.",
    "images": [
     {
-     "url": "maps/touchid-bracket.svg",
-     "caption": "Touch ID / headphone"
+     "url": "maps/touchbar-display.svg",
+     "caption": "Touch Bar display"
     },
     {
-     "url": "photos/nhoTkLOQidPELV5t.jpg",
+     "url": "photos/xnpZXjPETOCgaUmt.jpg",
      "credit": "iFixit · CC BY-NC-SA"
     },
     {
-     "url": "photos/J1mcIObmdYadVZZk.jpg",
+     "url": "photos/bex55QmYqj2E2iRY.jpg",
      "credit": "iFixit · CC BY-NC-SA"
     }
    ],
@@ -1394,25 +1394,46 @@
    "check": "Bracket on, all its screws in."
   },
   {
-   "title": "Refit the Touch Bar display bracket",
+   "title": "Refit the Touch ID and headphone bracket",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the box for **step 22** of Taking it apart.",
+   "text": "Press both connectors flat once more, then fit the shared bracket: **T3 2.4 mm ×2**.\n\nThe screws are in the box for **step 19** of Taking it apart.",
    "images": [
     {
-     "url": "maps/touchbar-display.svg",
-     "caption": "Touch Bar display"
+     "url": "maps/touchid-bracket.svg",
+     "caption": "Touch ID / headphone"
     },
     {
-     "url": "photos/xnpZXjPETOCgaUmt.jpg",
+     "url": "photos/nhoTkLOQidPELV5t.jpg",
      "credit": "iFixit · CC BY-NC-SA"
     },
     {
-     "url": "photos/bex55QmYqj2E2iRY.jpg",
+     "url": "photos/J1mcIObmdYadVZZk.jpg",
      "credit": "iFixit · CC BY-NC-SA"
     }
    ],
    "check": "Bracket on, all its screws in."
+  },
+  {
+   "title": "Refit both hinge covers",
+   "text": "Fit the hinge covers: **T3 2.0 mm ×4**, two per hinge.\n\nThe screws are in the box for **step 18** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/hinge-covers-2.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/3UJI2PCduGNlPeE2.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/2cHIGZtdWDwK1O4I.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Both covers on, four screws in.",
+   "section": "Putting it back together",
+   "subsection": "Finish"
   },
   {
    "title": "Refit the display flex bracket and cover",
@@ -1476,27 +1497,6 @@
     }
    ],
    "check": "Bracket on, all its screws in."
-  },
-  {
-   "title": "Refit both hinge covers",
-   "text": "Fit the hinge covers: **T3 2.0 mm ×4**, two per hinge.\n\nThe screws are in the box for **step 18** of Taking it apart.",
-   "images": [
-    {
-     "url": "maps/hinge-covers-2.svg",
-     "caption": "Screw map"
-    },
-    {
-     "url": "photos/3UJI2PCduGNlPeE2.jpg",
-     "credit": "iFixit · CC BY-NC-SA"
-    },
-    {
-     "url": "photos/2cHIGZtdWDwK1O4I.jpg",
-     "credit": "iFixit · CC BY-NC-SA"
-    }
-   ],
-   "check": "Both covers on, four screws in.",
-   "section": "Putting it back together",
-   "subsection": "Finish"
   },
   {
    "title": "Reconnect the battery power",
