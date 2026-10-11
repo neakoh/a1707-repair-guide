@@ -1,0 +1,1549 @@
+{
+ "title": "Top case transplant: MacBook Pro 15\" Touch Bar (A1707)",
+ "summary": "Move the logic board, display and Touch ID button from the old shell into a replacement top case that comes with the fans, battery, speakers, trackpad, battery board and microphone already fitted. About 3–4 hours.",
+ "needs": [
+  "[This toolkit](https://www.amazon.co.uk/dp/B09FFCGLHK) has every bit and tool below except the hair dryer (no affiliation)",
+  "P5 pentalobe (bit ★1.2)",
+  "P2 pentalobe (bit ★0.8)",
+  "T3 Torx",
+  "T5 Torx",
+  "T8 Torx (bit T8H)",
+  "Plastic spudger",
+  "Blunt tweezers",
+  "Opening picks",
+  "Suction cup",
+  "Hair dryer (not a heat gun)",
+  "A sheet of paper and a pen, for the screws (or a magnetic mat)"
+ ],
+ "cautions": [
+  "Keep every screw: as each step takes screws out, put them in a box on your sheet marked with that step's number. They go back in reverse, from the same boxes.",
+  "Touch ID only works with your original logic board. A torn ribbon kills it permanently.",
+  "Battery power connector off before touching anything else.",
+  "Never mix screws: several sizes differ by 0.1 mm."
+ ],
+ "steps": [
+  {
+   "title": "Disable Auto Boot",
+   "text": "This MacBook powers on when you open the lid. In Terminal, before shutting down:\n\n`sudo nvram AutoBoot=%00`\n\nYou turn it back on in the last step.\n\n**Why:** This laptop switches itself on when you open the lid or connect power. You will open and close the lid many times, and reconnect the battery near the end. With Auto Boot on, the board can power up while you are holding a connector or a metal screwdriver near it. That can short and kill the board. Run the command **on the laptop you are repairing**, not on this Mac.",
+   "images": [
+    {
+     "url": "photos/dLTjRC36EADiCFBK.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Drain the battery and power off",
+   "text": "Run the battery below **25%**, then shut down completely and unplug the charger.\n\n**Why:** A full battery holds much more energy. If a screwdriver slips and punctures or shorts a cell, a low cell is far less likely to overheat or catch fire.",
+   "check": "Below 25%, powered off, charger unplugged.",
+   "section": "Taking it apart",
+   "images": []
+  },
+  {
+   "title": "Check the new shell has every part fitted",
+   "text": "This guide is for a replacement top case that comes with all six of these already fitted:\n\n- Both fans\n- The battery (all six cells), stuck down\n- Both speakers (the boxes with grilles at the hinge corners)\n- The trackpad, with its ribbon cable\n- The battery board (the small board at the battery's edge, with the data cable)\n- The microphone (a short ribbon ending beside a fan, with a black pull tab)\n\nCheck yours has every one before you start, and that the battery cells are flat, with no swelling at the corners. If any part is missing, this guide doesn't cover moving it across.\n\n**Why:** Parts that sit under other parts must go in first. Finding a missing part at the end means taking everything out again.",
+   "warning": "Each of these costs a full teardown if you only find out at the end.",
+   "section": "Taking it apart",
+   "check": "All six parts fitted, and the cells are flat.",
+   "images": []
+  },
+  {
+   "title": "Set up a sheet for the screws",
+   "text": "Lay a sheet of paper next to the laptop. Each time a step takes screws out, draw a box for it, write the step number and the screw length in it, and put the screws in that box. Steps with two lengths get two boxes.\n\n**Why:** Many screws look the same but differ by a fraction of a millimetre. A screw that is too long can drill through the board underneath. The boxes show where each one came from, and you work back through them in reverse when you rebuild.",
+   "warning": "Several sizes differ by 0.1–0.2 mm. A long screw in a short hole punches through the board.",
+   "section": "Taking it apart",
+   "check": "Paper and pen beside the laptop.",
+   "images": []
+  },
+  {
+   "title": "Remove the six lower-case screws",
+   "text": "Close the lid and flip the laptop over. Remove the six **P5 pentalobe** screws (bit **★1.2**). Note the angle: they go back in at a slight tilt.",
+   "images": [
+    {
+     "url": "maps/lowercase.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/B2dyIeZ13jMyq4oN.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "P5 4.7 mm",
+     "count": 4,
+     "where": "lower case"
+    },
+    {
+     "name": "P5 6.6 mm",
+     "count": 2,
+     "where": "lower case, hinge end"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Lift a gap with the suction cup",
+   "text": "Press the suction cup down near the front edge, between the screw holes. Pull up just enough to open a slot.\n\n**Why:** The lower case has no edge to grip. The suction cup lifts it just enough for a pick to get in, without metal tools that scratch the aluminium.",
+   "images": [
+    {
+     "url": "photos/VZFA1MgVRKCoIZlv.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/QWPIB6vDdZCBEspJ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Release the two side clips",
+   "text": "Slide an opening pick into the gap, then around the nearest corner and halfway up the side until the clip pops. Repeat on the other side.\n\n**Why:** Hidden clips hold the case along the sides. If you pull the case off before they release, they bend or break and the case will not sit flat again.",
+   "images": [
+    {
+     "url": "photos/CIMWfGuyrYGngcBl.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/D2IKRLqXgXXTOlRy.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/6khJa1nYdTCtVhyh.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Slide the lower case off toward you",
+   "text": "Get your fingertips under the front edge and pull firmly **away from the hinge**, one corner at a time. If it sticks at the hinge, lever it from the hinge cutout near the headphone jack with the flat end of the spudger.\n\n**Why:** The clips at the hinge end are hooks. They release when you slide the case, and they snap off when you lift it.",
+   "images": [
+    {
+     "url": "photos/SUXHrYyCaAOVvcMN.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/FJ1XaUFTMZqVZmfu.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "Pull sideways, not up. Lifting snaps the hinge-end clips.",
+   "check": "Lower case off; the inside is visible.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Peel off the battery board cover",
+   "text": "The large rectangular cover on the board edge nearest the battery. Warm it with the hair dryer if it resists.\n\n**Why:** The battery's cables are under this cover. You must disconnect the battery before you touch anything else.",
+   "images": [
+    {
+     "url": "photos/ocQPFYqHXXonU4nL.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/RI2KP5bTSZKNllCp.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the battery data cable",
+   "text": "Peel back the tape, flip up the **ZIF locking flap** with the spudger, then slide the cable out parallel to the board.\n\n**Why:** This is the first half of cutting the battery off from the board, so nothing has power while you work.",
+   "images": [
+    {
+     "url": "photos/fElQdCLEnZnaiBFq.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/bYh4tpPaCJVg6hic.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the battery power connector",
+   "text": "Remove the pancake screw, then lift the connector with the spudger.\n\n**Why:** This cuts the power completely. Every connector you unplug after this is safe to touch. If you skip it, unplugging a live connector can short and damage the board.",
+   "images": [
+    {
+     "url": "maps/battery-conn.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/2RCPAZQTvLp6UKBM.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/tfv4QHe4U26merGN.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T5 3.7 mm pancake",
+     "count": 1,
+     "where": "battery connector"
+    }
+   ],
+   "warning": "Lift it high enough that it can't drop back onto its socket. If it touches while you work, it can destroy the logic board.",
+   "check": "Connector held clear of its socket.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the trackpad cable",
+   "text": "Remove the cover bracket, then pry the connector straight up.\n\n**Why:** The trackpad must come out before the logic board can lift clear, and its cable holds it to the board.",
+   "images": [
+    {
+     "url": "maps/trackpad-cable.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/riGibRD5sClWpQhG.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/uuOyaWIViVOiJBfE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 1.9 mm",
+     "count": 2,
+     "where": "trackpad cable bracket"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Free the trackpad ribbon from the old battery",
+   "text": "Warm the ribbon with the hair dryer until it's warm to the touch, then peel it up slowly and push it aside.\n\n**Why:** The ribbon is glued down. Warm glue lets go; cold glue tears the ribbon.",
+   "images": [
+    {
+     "url": "photos/QQTQsqurSpuHxJnA.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/CqoeEGSBCH6oHVMp.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "If it resists, add heat, not force. Don't fold it.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove the thirteen trackpad screws",
+   "text": "Two lengths that look identical. Keep them in separate piles.\n\n**Why:** Two lengths look the same. The longer screws in the wrong holes push through into the trackpad mechanism.",
+   "images": [
+    {
+     "url": "maps/trackpad.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/S4VQWHksHQG2kBsu.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/lM1ZxjrQ6fYp4Eru.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T5 5.8 mm",
+     "count": 9,
+     "where": "trackpad"
+    },
+    {
+     "name": "T5 4.9 mm",
+     "count": 4,
+     "where": "trackpad"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Drop the trackpad out and catch the washers",
+   "text": "Keep the laptop upside down and swing the lid open slightly. The trackpad drops onto the display. Feed its ribbon out through the chassis slot.\n\n**Why:** The washers set the trackpad's height. Without all nine, the trackpad sits crooked or does not click properly.",
+   "images": [
+    {
+     "url": "photos/WlgPUK6WYdJruGHZ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/HdfIJVNdthwxB3tM.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "Trackpad washer",
+     "count": 9,
+     "where": "screw posts"
+    }
+   ],
+   "warning": "Nine tiny washers sit loose on the posts. Count all nine before you move on.",
+   "check": "Trackpad out, nine washers accounted for.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the keyboard",
+   "text": "Remove the cover bracket and pry the connector straight up.\n\n**Why:** The keyboard is part of the old top case. Its cable must come off the board before the board can move.",
+   "images": [
+    {
+     "url": "maps/keyboard.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/X3ZbxDoUvWBnWDYJ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/bN2dDSYxq2LOmKQE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 1.9 mm",
+     "count": 2,
+     "where": "keyboard bracket"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the display board flex",
+   "text": "Remove the flex cover, then the connector bracket, then pry the flex straight up.\n\n**Why:** The display connects to the board here. The screen stays on the old case until later, so this cable must be free first.",
+   "images": [
+    {
+     "url": "maps/display-flex-2.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/fTkaYsij2KK2DEjy.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/enUF3M21TZsFfKXL.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 3.5 mm",
+     "count": 2,
+     "where": "display flex cover"
+    },
+    {
+     "name": "T3 1.7 mm",
+     "count": 2,
+     "where": "display connector bracket"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove both hinge covers",
+   "text": "Two screws per hinge.\n\n**Why:** The covers hide the hinge screws and some connectors. Nothing near the hinges is reachable until they are off.",
+   "images": [
+    {
+     "url": "maps/hinge-covers-2.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/3UJI2PCduGNlPeE2.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/2cHIGZtdWDwK1O4I.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 2.0 mm",
+     "count": 4,
+     "where": "hinge covers"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove the Touch ID / headphone bracket",
+   "text": "One bracket covers both connectors. Remove it, then pry the **headphone jack** connector straight up.\n\n**Why:** The bracket holds the Touch ID and headphone connectors down. They cannot come up while it is in place.",
+   "images": [
+    {
+     "url": "maps/touchid-bracket.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/nhoTkLOQidPELV5t.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/J1mcIObmdYadVZZk.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 2.4 mm",
+     "count": 2,
+     "where": "Touch ID / headphone bracket"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect Touch ID",
+   "text": "Pry the **power button / Touch ID** connector straight up off the board. No rocking, no sideways pressure.\n\n**Why:** The Touch ID button stays with the old case until the transfer. Its cable must come off the board first, gently, because it cannot be replaced.",
+   "images": [
+    {
+     "url": "maps/touchid-conn.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/NujTENCPJ3xGLLuD.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/rdTA6kRRAUoGtLru.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "This cable can't be replaced. From now on, never let it take any tension.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the Touch Bar digitizer",
+   "text": "Remove the single screw. With tweezers, **slide** the bracket toward the side edge until it clears its tab, then pry the cable straight up.\n\n**Why:** The Touch Bar is part of the top case. Its cables must come off before the board can lift out.",
+   "images": [
+    {
+     "url": "maps/digitizer.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/UCKQMu4FFbG1AHit.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/kAy4kdyyOMTDcl5R.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 1.3 mm",
+     "count": 1,
+     "where": "digitizer bracket"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the Touch Bar display",
+   "text": "Remove the bracket, pry the connector straight up.\n\n**Why:** This is the Touch Bar's second cable. Both must be free.",
+   "images": [
+    {
+     "url": "maps/touchbar-display.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/xnpZXjPETOCgaUmt.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/bex55QmYqj2E2iRY.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 1.9 mm",
+     "count": 2,
+     "where": "Touch Bar display bracket"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect both Thunderbolt flexes",
+   "text": "Remove the cover screws (two per side). Pry each flex up from the inside edge, nearest the fan, and push it aside.\n\n**Why:** The USB-C ports are separate boards joined to the logic board by these cables.",
+   "images": [
+    {
+     "url": "maps/thunderbolt.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/wbCC5jP6QPFyoAfU.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/2TXdcQuENUYf1I3X.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 1.3 mm",
+     "count": 4,
+     "where": "Thunderbolt covers, 2 per side"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect both speakers",
+   "text": "Slide the flat end of the spudger under each cable near its connector and twist gently.\n\n**Why:** The speakers are fitted in the new shell, so the old ones stay behind. Their cables must come off the board.",
+   "images": [
+    {
+     "url": "photos/cZZsVAXVqWMKJeV5.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/y4K3ueUlAe4SiTbx.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the microphone",
+   "text": "Peel the tape, flip up the ZIF flap, then pull the cable toward the fan by its tape.\n\n**Why:** Same reason: the cable runs from the old case to the board and must be free before the board moves.",
+   "images": [
+    {
+     "url": "photos/Q6eDQFEp656EJXLp.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/O42Mn6R2QD65RvDu.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Disconnect the three antenna cables",
+   "text": "Three thin black **antenna wires** (Wi-Fi/Bluetooth) run down from the hinge, beside the right-hand fan in the photos, and plug into the logic board. A small clip holds them, fixed by one screw.\n\n1. Remove the clip's single screw, where the heat pipe meets the fan.\n2. Each wire ends in a tiny round gold plug, like a miniature press stud. Slide the flat end of the spudger under the wire up to the plug and twist gently: it pops straight up. Repeat for all three.\n\nThe wires stay attached to the display; they only need to be off the board.\n\n**Why:** The antennas sit in the display hinge area. The board cannot lift away while they are attached.",
+   "images": [
+    {
+     "url": "maps/antenna-bundle.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/kjiJrTunFFeur5V6.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/PNhUdePfuCQfCgHq.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T5 2.9 mm",
+     "count": 1,
+     "where": "antenna bundle"
+    }
+   ],
+   "check": "All three plugs free. That's the last of the board's 14 cables: nothing should still be plugged in.",
+   "warning": "Lever under the plug, never pull the wire itself.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove the ten logic board screws",
+   "text": "Four lengths across three drivers. This is the worst place to mix screws up.\n\n**Why:** With every cable free, these screws are all that hold the board in.",
+   "images": [
+    {
+     "url": "maps/logic-board.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/Y1HMKCDvmGOvLdUD.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/S2KcqXfpbTnQlyqI.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 2.8 mm",
+     "count": 2,
+     "where": "logic board"
+    },
+    {
+     "name": "T5 2.9 mm",
+     "count": 5,
+     "where": "logic board"
+    },
+    {
+     "name": "T5 3.7 mm",
+     "count": 1,
+     "where": "logic board"
+    },
+    {
+     "name": "T8 3.9 mm",
+     "count": 1,
+     "where": "logic board"
+    },
+    {
+     "name": "T8 3.8 mm",
+     "count": 1,
+     "where": "logic board"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Lift the fan dampers",
+   "text": "Peel the two rubber vibration strips up off the fans, but leave them attached.\n\n**Why:** The rubber strips overlap the board edge. If you leave them stuck down, the board catches on them.",
+   "images": [
+    {
+     "url": "photos/yKQSfsrjjeryl2xE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/KnQLrITRiNhSuTE5.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Lift the logic board out",
+   "text": "Lever the left edge up with the spudger and lift the board away from the left.\n\n**Why:** The board is the core part that moves into the new case, and it must be out before you can reach the display hinges.",
+   "images": [
+    {
+     "url": "photos/bcluJR2UCXLJxgfb.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/hnbaWOydCOXmkDeL.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "It should come out with no resistance. If it snags, stop and find the cable you missed.",
+   "check": "Board out, Touch ID flex still attached to the old case and unstrained.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove the display board",
+   "text": "Four screws. When it goes back, the display flex must sit on top of the board, not under it.\n\n**Why:** This small board connects the screen to the logic board. It moves to the new case with the screen.",
+   "images": [
+    {
+     "url": "maps/display-board.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/lmD2ZSC3pqSNeL3p.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/vRUPusyYUbaTouKd.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T5 3.3 mm",
+     "count": 4,
+     "where": "display board"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove the antenna assembly screws",
+   "text": "Sixteen tiny **P2** screws (bit **★0.8**).\n\n**Why:** The antenna assembly covers the hinge screws. These tiny screws hold it.",
+   "images": [
+    {
+     "url": "maps/antenna.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/BNvbUJHdNRVmorBu.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/Lx5sbvvJM3hVmHwB.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "P2 1.5 mm",
+     "count": 16,
+     "where": "antenna assembly"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Lift the antenna assembly off",
+   "text": "The antenna assembly is **one long bar across the whole hinge edge**, hinge to hinge. iFixit's photos show only one end close up.\n\n1. Start at one end, by a hinge. Slide the pick under the bar and lift straight up.\n2. Work along the bar a little at a time, lifting each time. Do not slide the pick along under it.\n3. Take extra care in the middle: the display ribbons pass under the bar there.\n4. Lift the bar away with its cable bundle. With the logic board out, there is no heat sink to feed the bundle under.\n\nIf it will not lift, a screw is still in. Count 16 P2 screws for step 31, and check both ends by the hinge brackets. No adhesive is used here; if all 16 are out and it still grips, a minute of hair dryer on low along the bar is safe.\n\n**Why:** With it off, you can reach the hinges to free the screen.",
+   "images": [
+    {
+     "url": "photos/Jr4ErSg43xIDvWTZ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/VCWUbDWpFIFRrM5Q.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "Never slide the pick sideways under the bar: the display ribbons under the middle tear.",
+   "check": "The whole bar is out in one piece with its cable bundle.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove the display cable springs",
+   "text": "Four screws hold the two springs over the display cables.\n\n**Why:** The springs hold the display cables down at the hinge. They must come off before the screen can separate.",
+   "images": [
+    {
+     "url": "maps/springs.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/D4Ij6wvYJCZPIlsJ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/Pe3TsHgZQGUKmPQA.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 3.9 mm",
+     "count": 4,
+     "where": "display cable springs"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove two screws from each hinge",
+   "text": "Leave the third screw in each hinge for now.\n\n**Why:** The third screw keeps the screen attached while you get ready, so it does not fall.",
+   "images": [
+    {
+     "url": "maps/hinges-a-2.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/WKErKJXafMOVGCJD.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/QVXj4o5BKbpeWLDD.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T8 4.9 mm",
+     "count": 4,
+     "where": "hinges"
+    }
+   ],
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Separate the display",
+   "text": "Tape the glass above each hinge. Open the lid fully, stand the machine on its side, and remove the last screw from each hinge, topmost last. Push the halves together to free the hinges, then pull them apart.\n\n**Why:** The screen moves to the new case. It must come off the old one first.",
+   "images": [
+    {
+     "url": "maps/hinges-b.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/4AJDIuAZYrELRNfE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/rWcwPe1YVXGyQ1Co.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T8 4.9 mm",
+     "count": 2,
+     "where": "hinges, last pair"
+    }
+   ],
+   "warning": "Either half can fall without warning. Keep a hand on both.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Remove the fan over the Touch ID corner (old case)",
+   "text": "In the old case, the fan on the Touch ID side sits over the button's backplate. It has to come out first. The other fan stays.\n\n1. Take out every screw on this fan's rim (about three; Torx T5).\n2. Its cable came free with the logic board. Lift the fan straight out.\n\nSource: Vinship's A1707 video, 4:56 to 5:17, does this before the Touch ID work.\n\n**Why:** The backplate screws are under the fan.",
+   "images": [
+    {
+     "url": "maps/fan-touchid.svg",
+     "caption": "Which fan"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T5 fan screws",
+     "count": 3,
+     "where": "fan on the Touch ID side (old case)"
+    }
+   ],
+   "warning": "If T5 sits loose in a head, stop and try T3. A rounded head here is hard to get out.",
+   "check": "The fan is out and the Touch ID corner is clear.",
+   "section": "Taking it apart"
+  },
+  {
+   "title": "Touch ID: remove the backplate",
+   "text": "The button sits in the corner by the hinge, at the end of the Touch Bar. A small backplate holds it in.\n\n1. Check the new shell's Touch ID recess for a **small round silver disc** where the button's bottom rests. Note whether it is there.\n2. On the old case, remove the backplate's **six T3 screws**. Four silver ones are in the corners; two are black. Keep the colours apart.\n3. Lift the backplate off.\n\nSource: LaptopScreen.com's A1707 top case video, 7:36 ([watch](https://www.youtube.com/watch?v=rPW1-fsIVn4&t=456s)).\n\n**Why:** Touch ID only works with your original logic board, so your own button must move.",
+   "images": [
+    {
+     "url": "maps/touchid-plate-2.svg",
+     "caption": "Screw map"
+    }
+   ],
+   "parts": [
+    {
+     "name": "T3 silver (corners)",
+     "count": 4,
+     "where": "Touch ID backplate"
+    },
+    {
+     "name": "T3 black",
+     "count": 2,
+     "where": "Touch ID backplate"
+    }
+   ],
+   "warning": "From here on, never let the button's flex cable take any tension.",
+   "check": "Backplate off, six screws in the tray (4 silver, 2 black).",
+   "section": "Taking it apart",
+   "video": {
+    "youtube": "rPW1-fsIVn4",
+    "start": 456,
+    "end": 467,
+    "caption": "The backplate coming off",
+    "credit": "LaptopScreen.com"
+   }
+  },
+  {
+   "title": "Free the Touch ID button and its cable extension",
+   "text": "Both the button's cable and the extension sit on a **light adhesive strip**. Warm them with the hair dryer on low for 20–30 seconds, then slide a pick in flat from the side and work it along under the cable. Lift with the pick, never by pulling the ribbon.\n\n1. Peel back the **black tape** over the power button's cable extension.\n2. Gently unfold the flex cable to the left.\n3. Under it, flip up the connector's **locking lever** with a plastic pick, and pull the button's connector out of the extension.\n4. Thread the button's cable back through its slot. The button then **drops out the bottom** of the case. It is not glued.\n5. Carefully pry off the **cable extension** and set it aside. It moves to the new case too.\n6. If the new shell had no round disc, lift the old one out with fine metal tweezers (light adhesive) and press it into the new recess.\n\nSource: same video, 7:47 to 8:15 ([watch](https://www.youtube.com/watch?v=rPW1-fsIVn4&t=456s)).",
+   "images": [
+    {
+     "url": "maps/touchid-cable-2.svg",
+     "caption": "Cable order"
+    }
+   ],
+   "warning": "Pull only on the connector and the button body, never on the ribbon.",
+   "check": "Button and cable extension both out, ribbon intact; the new shell has its disc.",
+   "section": "Taking it apart",
+   "video": {
+    "youtube": "rPW1-fsIVn4",
+    "start": 467,
+    "end": 496,
+    "caption": "Freeing the button and extension",
+    "credit": "LaptopScreen.com"
+   }
+  },
+  {
+   "title": "Fit Touch ID into the new case",
+   "text": "1. Make sure the round disc is in the new recess.\n2. Thread the button's cable through its slot **from underneath**, and seat the button.\n3. Stick the cable extension in place.\n4. With tweezers, push the button's connector into the extension. It may need repositioning to go fully in.\n5. Lock the connector lever down with a plastic pick.\n6. Press the extension and the button's cable down onto their adhesive, and fold the tape back over.\n7. Refit the backplate: **silver screws in the corners, the two black screws** in the other holes.\n\nSource: same video, 8:25 to 9:08 ([watch](https://www.youtube.com/watch?v=rPW1-fsIVn4&t=456s)).",
+   "check": "Button flush and clicking, connector locked, backplate on with all six screws.",
+   "images": [
+    {
+     "url": "maps/touchid-cable-2.svg",
+     "caption": "Same path, reversed"
+    },
+    {
+     "url": "maps/touchid-plate-2.svg",
+     "caption": "Screws: silver in corners"
+    }
+   ],
+   "section": "Putting it back together",
+   "subsection": "Screen and board",
+   "video": {
+    "youtube": "rPW1-fsIVn4",
+    "start": 505,
+    "end": 549,
+    "caption": "Fitting it into the new case",
+    "credit": "LaptopScreen.com"
+   }
+  },
+  {
+   "title": "Fit the display to the new shell",
+   "text": "Stand the new shell on its side, open like the old one was. Lower the display's hinges into their recesses and hold both halves together.\n\nFit all **six T8 4.9 mm** hinge screws **loosely**, three per hinge.\n\n**Why:** Loose first, so the screen can be centred before anything is tightened.",
+   "images": [
+    {
+     "url": "maps/hinges-a-2.svg",
+     "caption": "Hinge screws: 3 per side, loose"
+    },
+    {
+     "url": "photos/WKErKJXafMOVGCJD.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/QVXj4o5BKbpeWLDD.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/4AJDIuAZYrELRNfE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/rWcwPe1YVXGyQ1Co.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "Either half can fall. Keep a hand on both until the screws are in.",
+   "check": "Six hinge screws in, loose.",
+   "section": "Putting it back together",
+   "subsection": "Screen and board"
+  },
+  {
+   "title": "Centre the screen and tighten the hinges",
+   "text": "Close the lid and check the gap is even down both sides. Adjust, then tighten all six hinge screws.\n\nIf the screen clicks or snaps when opening later, it sits too far forward: loosen, realign, tighten.",
+   "images": [
+    {
+     "url": "maps/hinges-b.svg",
+     "caption": "Hinges"
+    },
+    {
+     "url": "photos/4AJDIuAZYrELRNfE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/rWcwPe1YVXGyQ1Co.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Gaps even both sides, six screws tight.",
+   "section": "Putting it back together",
+   "subsection": "Screen and board"
+  },
+  {
+   "title": "Refit the display cable springs",
+   "text": "Lay the two springs over the display cables at the hinge and fit the **four T3 3.9 mm** screws.",
+   "images": [
+    {
+     "url": "maps/springs.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/D4Ij6wvYJCZPIlsJ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/Pe3TsHgZQGUKmPQA.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Both springs on, four screws in.",
+   "section": "Putting it back together",
+   "subsection": "Screen and board"
+  },
+  {
+   "title": "Fit the antenna assembly",
+   "text": "Lay the long antenna bar along the hinge edge, hinge to hinge, with its three wires coming off the middle. Keep the wires out of the board area for now. Fit the **sixteen P2 1.5 mm** screws (bit ★0.8).",
+   "images": [
+    {
+     "url": "maps/antenna.svg",
+     "caption": "16 P2: 8 each side"
+    },
+    {
+     "url": "photos/BNvbUJHdNRVmorBu.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/Lx5sbvvJM3hVmHwB.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/Jr4ErSg43xIDvWTZ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/VCWUbDWpFIFRrM5Q.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "These are tiny: make sure the bit is fully home before turning.",
+   "check": "Bar flat along its whole length, 16 screws in.",
+   "section": "Putting it back together",
+   "subsection": "Screen and board"
+  },
+  {
+   "title": "Fit the display board",
+   "text": "Place the display board and fit its **four T5 3.3 mm** screws.\n\n**The display flex must sit on top of the board, never under it.**",
+   "images": [
+    {
+     "url": "maps/display-board.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/lmD2ZSC3pqSNeL3p.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/vRUPusyYUbaTouKd.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Board seated, four screws in, flex on top.",
+   "section": "Putting it back together",
+   "subsection": "Screen and board"
+  },
+  {
+   "title": "Lower the logic board in",
+   "text": "Before the board goes in, check every cable that will plug into it lies **outside** the board's area, folded back toward the case edges. None may end up underneath:\n\n- **Antenna bundle** (three thin wires) and the **display board flex**, at the hinge edge\n- **Touch ID** and the **headphone jack**, in the hinge corner on the Touch ID side\n- **Touch Bar display** and **Touch Bar digitizer** cables, at the other hinge corner\n- Both **Thunderbolt flexes**, along each side edge\n- Both **fan** cables and the **microphone** ribbon, beside the fans\n- Both **speaker** cables, at the speaker boxes\n- The **keyboard**, **trackpad** and **battery data** cables, along the battery's edge\n\nThen:\n\n1. Check the two rubber dampers on the board edge sit flat.\n2. Hold the board by its edges. Gently pinch the antenna bundle together and guide it under the heat pipe as you lower the board. Use a tool to help it through; never force it.\n3. Lower it right edge first, then the left, into its place between the fans.\n4. Look round every edge: each cable from the list should be visible, not under the board.",
+   "images": [
+    {
+     "url": "maps/cables-clear.svg",
+     "caption": "Cables to keep clear"
+    },
+    {
+     "url": "photos/bcluJR2UCXLJxgfb.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/hnbaWOydCOXmkDeL.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "Never force it down. If it rocks, a cable is under it.",
+   "check": "Board flat and every cable from the list visible, none underneath.",
+   "section": "Putting it back together",
+   "subsection": "Screen and board"
+  },
+  {
+   "title": "Fit four logic board screws to hold it",
+   "text": "**Before anything is screwed down for good, you test the machine.** Next you connect every cable, power it on and check everything works (the test is the last step of this part). Only then do the brackets and the other screws go in.\n\nFor that test, four screws hold the board, so a connector can still be reseated easily if something fails:\n\n- **T8 3.9 mm** (left, by the hinge) and **T8 3.8 mm** (right, by the hinge)\n- **T3 2.8 mm ×2** (the two near the battery)\n\nNudge the board until the connectors line up with their sockets, then tighten these four snugly.\n\n**Why:** The board can't shift while you connect and test, and little has to be undone if something fails.",
+   "images": [
+    {
+     "url": "maps/logic-board-test.svg",
+     "caption": "The four to fit now"
+    }
+   ],
+   "warning": "A long screw in a short hole punches through the board. Take each from its own compartment.",
+   "check": "Four screws in, board can't move, connectors line up.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Press the fan dampers down",
+   "text": "Press the two rubber vibration strips back onto the fans.",
+   "check": "Both strips stuck down.",
+   "images": [
+    {
+     "url": "photos/yKQSfsrjjeryl2xE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/KnQLrITRiNhSuTE5.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect both fans",
+   "text": "The new shell's fans each have a short cable. Plug each into its socket on the board beside that fan and press it fully home.\n\niFixit's guides and the videos never show these sockets up close, so the diagram marks the area, not the exact socket: follow each fan's own cable to the socket it reaches.\n\n**Why:** Without them the machine overheats and throttles.",
+   "check": "Both fan cables seated.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test",
+   "images": [
+    {
+     "url": "maps/fans-connect.svg",
+     "caption": "Where the fan cables plug in"
+    }
+   ]
+  },
+  {
+   "title": "Connect the three antenna cables",
+   "text": "Line each gold plug up squarely over its socket and press straight down until it clicks. Leave the bundle clip off for now: it goes back after the test.",
+   "images": [
+    {
+     "url": "photos/kjiJrTunFFeur5V6.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/PNhUdePfuCQfCgHq.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Connector pressed flat, its whole length level.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect the microphone",
+   "text": "Flip the ZIF lever up, slide the cable in by its tape tab, flip the lever down. Re-stick the tape over the socket.",
+   "check": "Cable fully in, lever down.",
+   "images": [
+    {
+     "url": "photos/Q6eDQFEp656EJXLp.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/O42Mn6R2QD65RvDu.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect both speakers",
+   "text": "Press each speaker connector straight down onto its socket.",
+   "check": "Both clicked in.",
+   "images": [
+    {
+     "url": "photos/cZZsVAXVqWMKJeV5.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/y4K3ueUlAe4SiTbx.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect both Thunderbolt flexes",
+   "text": "Press each flex connector straight down, then fit its cover now: **T3 1.3 mm ×4**, two each side.\n\n**Why now:** unlike the other connectors, these flexes are stiff and can spring up off their sockets without the cover holding them. iFixit doesn't say whether the test needs them; screwing them down now is the safe side.",
+   "images": [
+    {
+     "url": "maps/thunderbolt.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/wbCC5jP6QPFyoAfU.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/2TXdcQuENUYf1I3X.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Both seated, four cover screws in.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect the Touch Bar display",
+   "text": "Press the connector straight down until it clicks. Leave its bracket off for now: the brackets go back after the test.",
+   "images": [
+    {
+     "url": "photos/xnpZXjPETOCgaUmt.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/bex55QmYqj2E2iRY.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Connector pressed flat, its whole length level.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect the Touch Bar digitizer",
+   "text": "Press the cable straight down until it clicks. Leave its bracket off for now: the brackets go back after the test.",
+   "images": [
+    {
+     "url": "photos/UCKQMu4FFbG1AHit.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/kAy4kdyyOMTDcl5R.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Connector pressed flat, its whole length level.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect Touch ID and the headphone jack",
+   "text": "Press the Touch ID connector straight down onto the board, then the headphone jack connector. Leave their shared bracket off for now: it goes back after the test.",
+   "images": [
+    {
+     "url": "photos/nhoTkLOQidPELV5t.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/J1mcIObmdYadVZZk.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/NujTENCPJ3xGLLuD.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/rdTA6kRRAUoGtLru.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "warning": "Straight down only on Touch ID. No rocking, no tension on the cable.",
+   "check": "Connector pressed flat, its whole length level.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect the display board flex",
+   "text": "Press the flex straight down onto its connector until it clicks. Leave its bracket and cover off for now: they go back after the test.",
+   "images": [
+    {
+     "url": "photos/fTkaYsij2KK2DEjy.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/enUF3M21TZsFfKXL.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Connector pressed flat, its whole length level.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect the keyboard",
+   "text": "Press the keyboard connector straight down until it clicks. Leave its bracket off for now: the brackets go back after the test.",
+   "images": [
+    {
+     "url": "photos/X3ZbxDoUvWBnWDYJ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/bN2dDSYxq2LOmKQE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Connector pressed flat, its whole length level.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect the trackpad",
+   "text": "The new shell's trackpad cable runs across the battery. Press its connector straight down onto the board until it clicks. Leave its bracket off for now: the brackets go back after the test.",
+   "images": [
+    {
+     "url": "photos/riGibRD5sClWpQhG.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/uuOyaWIViVOiJBfE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Connector pressed flat, its whole length level.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect the battery data cable",
+   "text": "Flip the ZIF lever up, slide the battery board's data cable in parallel to the board, flip the lever down. Re-stick its tape.",
+   "check": "Cable fully in, lever down.",
+   "images": [
+    {
+     "url": "photos/fElQdCLEnZnaiBFq.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/bYh4tpPaCJVg6hic.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Connect the battery power: last",
+   "text": "Lower the battery power connector onto its socket and fit the **T5 3.7 mm** pancake screw. Then press the battery board cover back on (rotate it 180° if it won't sit flat).\n\n**Why:** Power goes on only when every other connector is seated.",
+   "images": [
+    {
+     "url": "maps/battery-conn.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/2RCPAZQTvLp6UKBM.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/tfv4QHe4U26merGN.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/ocQPFYqHXXonU4nL.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/RI2KP5bTSZKNllCp.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Connector screwed down, cover on.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test"
+  },
+  {
+   "title": "Test everything before closing",
+   "text": "**Look first:** every connector from this part pressed flat; no loose screw or washer in the case; no cable trapped. The brackets are still off, so don't press on the board.\n\n**Power on:** dry, non-metal surface, charger in, press the Touch ID button (Auto Boot is off). Don't touch the board while it's on.\n\n| Part | How to test | If it fails |\n|---|---|---|\n| Touch ID | System Settings → Touch ID & Password → Add Fingerprint | Touch ID connector, or button into extension |\n| Touch Bar | Lights up, responds to taps | Touch Bar display / digitizer |\n| Keyboard | Every key + backlight | Keyboard connector |\n| Trackpad | Click and Force Click | Trackpad connector |\n| Speakers | Music; Sound → Balance left/right | Speaker connectors |\n| Microphone | Voice Memos | Mic cable |\n| Camera | Photo Booth | Display board flex |\n| Wi-Fi / Bluetooth | Option-click Wi-Fi: RSSI about −40 to −70; pair a device | Antenna plugs |\n| Ports | Charge + a USB device on all 4 USB-C; headphone jack | That side's Thunderbolt flex; headphone connector |\n| Fans | Heavy load, both spin | Fan cables |\n| Battery | System Information → Power: recognised, charging | Battery data cable |\n| Lid | Close: sleeps; open: wakes | Display cables at the hinge |\n\n**Full check:** shut down, hold **D**, press power: Apple Diagnostics.\n\n**Shut down before closing.** If something fails: shut down, disconnect the battery, reseat the named connector.\n\n**Why:** One loose connector found after closing means opening it all again.",
+   "warning": "Shut down and disconnect the battery before reseating anything.",
+   "check": "Every row works and Apple Diagnostics passes.",
+   "section": "Putting it back together",
+   "subsection": "Connect and test",
+   "images": []
+  },
+  {
+   "title": "Shut down and disconnect the battery",
+   "text": "Shut down. Remove the battery power connector's **T5 3.7 mm** pancake screw and lift the connector clear of its socket.\n\n**Why:** The next screws go in right beside the board's power. No live battery while a steel driver is near it.",
+   "images": [
+    {
+     "url": "maps/battery-conn.svg",
+     "caption": "Battery power connector"
+    }
+   ],
+   "warning": "Keep the connector lifted so it can't fall back onto its socket.",
+   "check": "Connector clear of its socket.",
+   "section": "Putting it back together",
+   "subsection": "Finish"
+  },
+  {
+   "title": "Fit the remaining six logic board screws",
+   "text": "Fit the other six:\n\n- **T5 2.9 mm ×5**\n- **T5 3.7 mm ×1** (right edge)\n\nThen tighten all ten.\n\nThe screws are in the box for **step 27** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/logic-board-rest.svg",
+     "caption": "The other six"
+    }
+   ],
+   "check": "Ten screws in and tight.",
+   "section": "Putting it back together",
+   "subsection": "Finish"
+  },
+  {
+   "title": "Refit the antenna bundle clip",
+   "section": "Putting it back together",
+   "subsection": "Finish",
+   "text": "Press the three plugs flat once more, then fit the clip over the bundle: **T5 2.9 mm ×1**.\n\nThe screws are in the box for **step 26** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/antenna-bundle.svg",
+     "caption": "Antenna clip"
+    },
+    {
+     "url": "photos/kjiJrTunFFeur5V6.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/PNhUdePfuCQfCgHq.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Bracket on, all its screws in."
+  },
+  {
+   "title": "Refit the Touch ID and headphone bracket",
+   "section": "Putting it back together",
+   "subsection": "Finish",
+   "text": "Press both connectors flat once more, then fit the shared bracket: **T3 2.4 mm ×2**.\n\nThe screws are in the box for **step 19** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/touchid-bracket.svg",
+     "caption": "Touch ID / headphone"
+    },
+    {
+     "url": "photos/nhoTkLOQidPELV5t.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/J1mcIObmdYadVZZk.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Bracket on, all its screws in."
+  },
+  {
+   "title": "Refit the Touch Bar digitizer bracket",
+   "section": "Putting it back together",
+   "subsection": "Finish",
+   "text": "Slide the bracket back under its slotted tab with tweezers, then fit **T3 1.3 mm ×1**.\n\nThe screws are in the box for **step 21** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/digitizer.svg",
+     "caption": "Touch Bar digitizer"
+    },
+    {
+     "url": "photos/UCKQMu4FFbG1AHit.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/kAy4kdyyOMTDcl5R.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Bracket on, all its screws in."
+  },
+  {
+   "title": "Refit the Touch Bar display bracket",
+   "section": "Putting it back together",
+   "subsection": "Finish",
+   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the box for **step 22** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/touchbar-display.svg",
+     "caption": "Touch Bar display"
+    },
+    {
+     "url": "photos/xnpZXjPETOCgaUmt.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/bex55QmYqj2E2iRY.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Bracket on, all its screws in."
+  },
+  {
+   "title": "Refit the display flex bracket and cover",
+   "section": "Putting it back together",
+   "subsection": "Finish",
+   "text": "Fit the bracket (**T3 1.7 mm ×2**), then the cover over it (**T3 3.5 mm ×2**).\n\nThe screws are in the box for **step 17** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/display-flex-2.svg",
+     "caption": "Display flex"
+    },
+    {
+     "url": "photos/fTkaYsij2KK2DEjy.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/enUF3M21TZsFfKXL.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Bracket on, all its screws in."
+  },
+  {
+   "title": "Refit the keyboard bracket",
+   "section": "Putting it back together",
+   "subsection": "Finish",
+   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the box for **step 16** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/keyboard.svg",
+     "caption": "Keyboard"
+    },
+    {
+     "url": "photos/X3ZbxDoUvWBnWDYJ.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/bN2dDSYxq2LOmKQE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Bracket on, all its screws in."
+  },
+  {
+   "title": "Refit the trackpad bracket",
+   "section": "Putting it back together",
+   "subsection": "Finish",
+   "text": "Press the connector flat once more, then fit its bracket: **T3 1.9 mm ×2**.\n\nThe screws are in the box for **step 12** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/trackpad-cable.svg",
+     "caption": "Trackpad"
+    },
+    {
+     "url": "photos/riGibRD5sClWpQhG.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/uuOyaWIViVOiJBfE.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Bracket on, all its screws in."
+  },
+  {
+   "title": "Refit both hinge covers",
+   "text": "Fit the hinge covers: **T3 2.0 mm ×4**, two per hinge.\n\nThe screws are in the box for **step 18** of Taking it apart.",
+   "images": [
+    {
+     "url": "maps/hinge-covers-2.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/3UJI2PCduGNlPeE2.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    },
+    {
+     "url": "photos/2cHIGZtdWDwK1O4I.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "check": "Both covers on, four screws in.",
+   "section": "Putting it back together",
+   "subsection": "Finish"
+  },
+  {
+   "title": "Reconnect the battery power",
+   "text": "Lower the power connector onto its socket, fit the **T5 3.7 mm** pancake screw, and press the battery board cover back on (rotate it 180° if it won't sit flat).",
+   "images": [
+    {
+     "url": "maps/battery-conn.svg",
+     "caption": "Battery power connector"
+    }
+   ],
+   "check": "Connector screwed down, cover on.",
+   "section": "Putting it back together",
+   "subsection": "Finish"
+  },
+  {
+   "title": "Close up and restore Auto Boot",
+   "text": "Hook the hinge-end clips first, slide toward the hinge, press the clips home, then refit the six P5 screws at the **slight angle** they came out at: the 6.6 mm pair on the hinge edge. In Terminal:\n\n`sudo nvram AutoBoot=%03`\n\nIf anything misbehaves, reset the SMC before assuming damage.\n\n**Why:** Auto Boot is what makes the laptop start when you open the lid. Turn it back on so it behaves normally.",
+   "images": [
+    {
+     "url": "maps/lowercase.svg",
+     "caption": "Screw map"
+    },
+    {
+     "url": "photos/2jJJSwavVeNYqoh1.jpg",
+     "credit": "iFixit · CC BY-NC-SA"
+    }
+   ],
+   "section": "Putting it back together",
+   "subsection": "Finish"
+  },
+  {
+   "title": "Finished",
+   "section": "Putting it back together",
+   "subsection": "Finish",
+   "text": "The old keyboard is gone and the machine is back together, with your own Touch ID still working.\n\n- Your sheet should now be empty of screws. If a box still has any, find the step it belongs to before using the laptop.\n- The old top case keeps the parts that stayed behind. Recycle it, ideally its battery separately at a battery drop-off.\n\n**Thanks to** iFixit for the take-apart guides and photos this is built on (CC BY-NC-SA 3.0), and LaptopScreen.com for the video the Touch ID transfer follows. The full list is under Overview, sources and credits.\n\n**Help extend this guide.** If you've done this with a shell that arrived without some parts fitted, or spotted a mistake, contributions are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
+   "check": "Laptop working, sheet empty.",
+   "images": []
+  }
+ ],
+ "publish": {
+  "project": "a1707-guide",
+  "credits": [
+   "**Help extend this guide.** It only covers shells that arrive with every part fitted. If you've moved the fans, battery, speakers, trackpad, battery board or microphone into a bare shell, or spotted a mistake, contributions are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
+   "Steps for taking the machine apart are adapted from iFixit's MacBook Pro 15\" Touch Bar Late 2016 [Battery](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Battery+Replacement/112876), [Screen](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Screen+Replacement/122604) and [Trackpad](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Trackpad+Replacement/121428) guides.",
+   "The Touch ID transfer follows [LaptopScreen.com's A1707 teardown video](https://www.youtube.com/watch?v=rPW1-fsIVn4&t=456s).",
+   "Screw maps and diagrams are drawn for this guide.",
+   "Photos from [iFixit](https://www.ifixit.com) repair guides, used under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). This guide is shared under the same licence."
+  ]
+ }
+}

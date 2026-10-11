@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Helvetica,sans-serif">
+<rect width="900" height="600" fill="#18181a"/>
+<text x="30" y="40" fill="#f2f2f4" font-size="20" font-weight="600">Touch ID backplate: six T3 screws, two colours</text>
+<text x="30" y="64" fill="#9a9aa2" font-size="13">Schematic of the corner, laptop upside down, hinge away. Exact spots: see the video still.</text><rect x="30" y="96" width="560" height="40" rx="6" fill="#26262a" stroke="#46464c"/>
+<text x="330" y="121" fill="#77777e" font-size="12" text-anchor="middle">HINGE EDGE (away from you)</text>
+<path d="M30 136 L30 196 L70 196 L110 136 Z" fill="#2b2b2f" stroke="#4a4a50"/>
+<text x="58" y="160" fill="#77777e" font-size="11" text-anchor="middle">hinge</text>
+<path d="M30 136 L30 560" stroke="#5a5a60" stroke-width="2"/>
+<text x="40" y="160" fill="#77777e" font-size="11" transform="rotate(90 40 160)">side edge</text>
+<rect x="150" y="170" width="300" height="220" rx="18" fill="#2a2a2e" stroke="#9a9aa2" stroke-width="2"/>
+<circle cx="300" cy="280" r="62" fill="none" stroke="#4a4a50" stroke-dasharray="5 4"/>
+<text x="300" y="276" fill="#77777e" font-size="12" text-anchor="middle">Touch ID button</text>
+<text x="300" y="292" fill="#77777e" font-size="12" text-anchor="middle">(under the plate)</text>
+<g stroke="#dcdce2" stroke-width="3" fill="none"><circle cx="182" cy="202" r="10"/><circle cx="418" cy="202" r="10"/><circle cx="182" cy="358" r="10"/><circle cx="418" cy="358" r="10"/></g>
+<g fill="#dcdce2"><circle cx="182" cy="202" r="3"/><circle cx="418" cy="202" r="3"/><circle cx="182" cy="358" r="3"/><circle cx="418" cy="358" r="3"/></g>
+<g stroke="#ff9e80" stroke-width="3" fill="#111"><circle cx="220" cy="280" r="10"/><circle cx="380" cy="280" r="10"/></g>
+<text x="150" y="410" fill="#dcdce2" font-size="13">silver × 4: the corners</text>
+<text x="150" y="430" fill="#ff9e80" font-size="13">black × 2: the other holes</text>
+<path d="M450 300 C490 300 500 330 560 330" stroke="#86d9b0" stroke-width="3" fill="none"/>
+<text x="500" y="355" fill="#86d9b0" font-size="13">flex + extension (next step)</text>
+<circle cx="48" cy="520" r="7" fill="none" stroke="#dcdce2" stroke-width="3"/><text x="62" y="525" fill="#e6e6ea" font-size="14">T3 silver ×4</text>
+<circle cx="200" cy="520" r="7" fill="#111" stroke="#ff9e80" stroke-width="3"/><text x="214" y="525" fill="#e6e6ea" font-size="14">T3 black ×2</text>
+<text x="330" y="525" fill="#9a9aa2" font-size="13">Keep the colours in separate compartments.</text>
+<rect x="630" y="104" width="212" height="188" rx="8" fill="#141416" stroke="#3d3d42"/>
+<text x="640" y="120" fill="#9a9aa2" font-size="11">WHOLE MACHINE · close-up boxed</text>
+<rect x="640.0" y="130.0" width="192.4" height="136.5" rx="14" fill="#232326" stroke="#5a5a60"/>
+<rect x="642.6" y="131.8" width="187.2" height="10.4" rx="4" fill="none" stroke="#3d3d42"/>
+<rect x="643.9" y="144.3" width="184.6" height="59.8" fill="#202422" stroke="#2f3a34" stroke-dasharray="3 3"/>
+<rect x="695.1" y="204.6" width="39.8" height="41.6" rx="4" fill="#2a2a2e" stroke="#46464c"/>
+<rect x="737.5" y="204.6" width="39.8" height="41.6" rx="4" fill="#2a2a2e" stroke="#46464c"/>
+<rect x="656.9" y="205.4" width="33.3" height="26.0" rx="4" fill="#2a2a2e" stroke="#46464c"/>
+<rect x="782.2" y="205.4" width="33.3" height="26.0" rx="4" fill="#2a2a2e" stroke="#46464c"/>
+<rect x="698.5" y="248.8" width="75.4" height="15.1" rx="4" fill="none" stroke="#46464c" stroke-dasharray="3 3"/>
+<circle cx="675.1" cy="169.0" r="18.2" fill="#2b2b2f" stroke="#4a4a50"/>
+<circle cx="797.3" cy="169.0" r="18.2" fill="#2b2b2f" stroke="#4a4a50"/>
+<text x="736.2" y="137.8" fill="#77777e" font-size="9" text-anchor="middle">hinge</text>
+<text x="736.2" y="231.4" fill="#5d5d64" font-size="9" text-anchor="middle">battery</text>
+<text x="736.2" y="176.8" fill="#4f6a5c" font-size="9" text-anchor="middle">board (out)</text>
+<rect x="641.3" y="131.3" width="23.4" height="18.2" rx="4" fill="#f5d76e22" stroke="#f5d76e" stroke-width="2"/>
+<text x="666.0" y="154.7" fill="#f5d76e" font-size="10">Touch ID</text>
+</svg>

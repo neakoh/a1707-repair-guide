@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Helvetica,sans-serif">
+<rect width="900" height="600" fill="#18181a"/>
+<text x="30" y="40" fill="#f2f2f4" font-size="20" font-weight="600">Touch ID cable: the order it comes free</text>
+<text x="30" y="64" fill="#9a9aa2" font-size="13">Schematic of the corner, laptop upside down, hinge away. Out: 1 → 5. Back in: reversed.</text><rect x="30" y="96" width="560" height="40" rx="6" fill="#26262a" stroke="#46464c"/>
+<text x="330" y="121" fill="#77777e" font-size="12" text-anchor="middle">HINGE EDGE (away from you)</text>
+<path d="M30 136 L30 196 L70 196 L110 136 Z" fill="#2b2b2f" stroke="#4a4a50"/>
+<text x="58" y="160" fill="#77777e" font-size="11" text-anchor="middle">hinge</text>
+<path d="M30 136 L30 560" stroke="#5a5a60" stroke-width="2"/>
+<text x="40" y="160" fill="#77777e" font-size="11" transform="rotate(90 40 160)">side edge</text>
+<rect x="300" y="200" width="250" height="40" rx="5" fill="#2b2b2f" stroke="#86d9b0" stroke-width="2"/>
+<text x="425" y="225" fill="#86d9b0" font-size="13" text-anchor="middle">cable extension (stuck down)</text>
+<rect x="250" y="192" width="50" height="56" rx="4" fill="#2b2b2f" stroke="#f5d76e" stroke-width="2"/>
+<path d="M250 192 L230 168" stroke="#f5d76e" stroke-width="3"/>
+<text x="150" y="164" fill="#f5d76e" font-size="13">lever: flip up</text>
+<path d="M250 220 C210 220 190 270 160 280" stroke="#c4b5fd" stroke-width="6" fill="none" stroke-linecap="round"/>
+<text x="150" y="315" fill="#c4b5fd" font-size="13">button flex</text>
+<rect x="120" y="268" width="70" height="30" rx="4" fill="#ffffff10" stroke="#9a9aa2" stroke-dasharray="4 3"/>
+<text x="100" y="290" fill="#9a9aa2" font-size="12" text-anchor="end">slot</text>
+<rect x="190" y="255" width="110" height="26" rx="4" fill="#00000080" stroke="#e6e6ea" stroke-dasharray="3 3"/>
+<text x="245" y="273" fill="#e6e6ea" font-size="12" text-anchor="middle">black tape</text>
+<text x="60" y="372" fill="#77777e" font-size="12">SIDE VIEW THROUGH THE CASE</text>
+<rect x="60" y="384" width="500" height="22" fill="#3a3a40"/>
+<rect x="120" y="384" width="70" height="22" fill="#18181a"/>
+<path d="M155 420 L155 350" stroke="#c4b5fd" stroke-width="6" stroke-linecap="round"/>
+<circle cx="155" cy="440" r="24" fill="#2b2b2f" stroke="#e6e6ea" stroke-width="2"/>
+<text x="190" y="436" fill="#e6e6ea" font-size="13">button drops out the bottom:</text>
+<text x="190" y="454" fill="#e6e6ea" font-size="13">not glued</text>
+<g font-size="14" fill="#e6e6ea">
+<text x="60" y="500">1  Peel back the black tape.</text>
+<text x="60" y="520">2  Unfold the flex.  3  Flip the lever; pull the connector out.</text>
+<text x="60" y="540">4  Thread the flex back through the slot.  5  Button out; pry the extension off.</text>
+<text x="60" y="568" fill="#ff9e80">Never pull on the ribbon itself.</text></g>
+<rect x="630" y="104" width="212" height="188" rx="8" fill="#141416" stroke="#3d3d42"/>
+<text x="640" y="120" fill="#9a9aa2" font-size="11">WHOLE MACHINE · close-up boxed</text>
+<rect x="640.0" y="130.0" width="192.4" height="136.5" rx="14" fill="#232326" stroke="#5a5a60"/>
+<rect x="642.6" y="131.8" width="187.2" height="10.4" rx="4" fill="none" stroke="#3d3d42"/>
+<rect x="643.9" y="144.3" width="184.6" height="59.8" fill="#202422" stroke="#2f3a34" stroke-dasharray="3 3"/>
+<rect x="695.1" y="204.6" width="39.8" height="41.6" rx="4" fill="#2a2a2e" stroke="#46464c"/>
+<rect x="737.5" y="204.6" width="39.8" height="41.6" rx="4" fill="#2a2a2e" stroke="#46464c"/>
+<rect x="656.9" y="205.4" width="33.3" height="26.0" rx="4" fill="#2a2a2e" stroke="#46464c"/>
+<rect x="782.2" y="205.4" width="33.3" height="26.0" rx="4" fill="#2a2a2e" stroke="#46464c"/>
+<rect x="698.5" y="248.8" width="75.4" height="15.1" rx="4" fill="none" stroke="#46464c" stroke-dasharray="3 3"/>
+<circle cx="675.1" cy="169.0" r="18.2" fill="#2b2b2f" stroke="#4a4a50"/>
+<circle cx="797.3" cy="169.0" r="18.2" fill="#2b2b2f" stroke="#4a4a50"/>
+<text x="736.2" y="137.8" fill="#77777e" font-size="9" text-anchor="middle">hinge</text>
+<text x="736.2" y="231.4" fill="#5d5d64" font-size="9" text-anchor="middle">battery</text>
+<text x="736.2" y="176.8" fill="#4f6a5c" font-size="9" text-anchor="middle">board (out)</text>
+<rect x="641.3" y="131.3" width="23.4" height="18.2" rx="4" fill="#f5d76e22" stroke="#f5d76e" stroke-width="2"/>
+<text x="666.0" y="154.7" fill="#f5d76e" font-size="10">Touch ID</text>
+</svg>
