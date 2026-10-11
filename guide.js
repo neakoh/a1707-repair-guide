@@ -129,7 +129,7 @@ function stepHTML(guide, step, place) {
     ${options.length ? `<fieldset class="choices">${options.map(o =>
       `<label><input type="checkbox" data-option="${o.id}"><span>${escape(o.label)}${o.detail ? `<small>${escape(o.detail)}</small>` : ''}</span></label>`).join('')}</fieldset>` : ''}
     ${step.warning ? `<p class="warning"><span class="mark">⚠</span><span>${inline(step.warning)}</span></p>` : ''}
-    ${step.parts?.length ? `<div class="parts"><h4>Comes out · onto the spot marked step <span class="box"></span></h4>
+    ${step.parts?.length ? `<div class="parts"><h2 class="label-h">Comes out · onto the spot marked step <span class="box"></span></h2>
       <table class="screws"><tbody>${step.parts.map(p => `<tr><td class="count">${p.count ?? ''}${p.count ? '×' : ''}</td>
         <td class="name">${escape(p.name)}</td><td class="where">${escape(p.where ?? '')}</td></tr>`).join('')}</tbody></table></div>` : ''}
     ${step.check ? `<p class="check">Done when: ${inline(step.check)}</p>` : ''}
@@ -142,9 +142,9 @@ function overviewHTML(guide) {
     <h1>${escape(guide.title)}</h1>
     <div class="body">
     ${guide.summary ? `<p class="summary">${inline(guide.summary)}</p>` : ''}
-    ${guide.needs?.length ? `<h4>You need</h4><ul class="needs">${guide.needs.map(n => `<li>${inline(n)}</li>`).join('')}</ul>` : ''}
+    ${guide.needs?.length ? `<h2 class="label-h">You need</h2><ul class="needs">${guide.needs.map(n => `<li>${inline(n)}</li>`).join('')}</ul>` : ''}
     ${guide.cautions?.length ? `<ul class="cautions">${guide.cautions.map(c => `<li>${inline(c)}</li>`).join('')}</ul>` : ''}
-    ${guide.publish?.credits?.length ? `<section class="sources"><h4>Sources and credits</h4>
+    ${guide.publish?.credits?.length ? `<section class="sources"><h2 class="label-h">Sources and credits</h2>
       ${guide.publish.credits.map(c => `<p>${inline(c)}</p>`).join('')}</section>` : ''}
     </div>
   </article>`;

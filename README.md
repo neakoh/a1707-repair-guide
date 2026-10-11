@@ -23,5 +23,6 @@ Especially wanted: the steps for moving the fans, battery, speakers, trackpad, b
 - Take-apart steps adapted from iFixit's MacBook Pro 15" Touch Bar Late 2016 Battery, Screen and Trackpad guides; photos from iFixit, used under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 - The Touch ID transfer follows [LaptopScreen.com's A1707 teardown video](https://www.youtube.com/watch?v=rPW1-fsIVn4&t=456s).
 - Screw maps and diagrams are drawn for this guide.
+- Set in IBM Plex Sans and IBM Plex Mono, under the SIL Open Font License (`fonts/OFL-IBM-Plex.txt`).
 
 This guide is shared under the same licence, CC BY-NC-SA 3.0: share and adapt it, with credit, not for commercial use, under the same terms.
