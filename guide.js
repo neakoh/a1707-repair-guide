@@ -205,8 +205,8 @@ function render(guide, state) {
       const count = pictures.querySelectorAll('figure').length;
       showPicture(pictures, (Number(picture.closest('figure').dataset.picture) + 1) % count);
     }
-    if (event.target.closest('.steps-toggle')) return document.body.classList.toggle('list-open');
-    if (event.target.closest('nav a, .pages a')) document.body.classList.remove('list-open');
+    if (event.target.closest('.steps-toggle')) return openList(!document.body.classList.contains('list-open'));
+    if (event.target.closest('nav a, .pages a')) openList(false);
     const copy = event.target.closest('.copy');
     if (copy) {
       navigator.clipboard?.writeText(copy.previousElementSibling.textContent);
@@ -246,6 +246,14 @@ function render(guide, state) {
   }
   update(guide, state);
   show(guide, state);
+}
+
+/** Opens or closes the step list on phones and tablets; its button says what it will do. */
+function openList(open) {
+  document.body.classList.toggle('list-open', open);
+  const toggle = document.querySelector('.steps-toggle');
+  toggle.textContent = open ? 'Close' : 'Steps';
+  toggle.setAttribute('aria-label', open ? 'Hide the steps' : 'Show the steps');
 }
 
 function showPicture(pictures, index) {

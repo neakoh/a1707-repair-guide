@@ -188,9 +188,12 @@ figure:not([hidden]) { animation: fade 0.3s ease both; }
     transition: background-color 0.2s ease, transform 0.12s ease; }
   .steps-toggle:active { transform: scale(0.96); }
   .list-open .steps-toggle { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .pages, nav { display: none; }
-  .list-open .pages { display: block; grid-column: 1 / -1; }
-  .list-open nav { display: block; max-height: 60vh; animation: fade 0.25s ease both; }
+  /* The list grows out of the box and folds back into it. */
+  .pages, nav { max-height: 0; opacity: 0; overflow: hidden; padding-top: 0; padding-bottom: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease; }
+  .pages { grid-column: 1 / -1; margin-top: 0; transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.35s ease; }
+  .list-open .pages { max-height: 60px; opacity: 1; margin-top: 12px; }
+  .list-open nav { max-height: 60vh; opacity: 1; overflow-y: auto; padding-top: 10px; padding-bottom: 14px; }
   .bar { padding: 8px 14px 10px; }
   main { padding: 28px 24px 196px; max-width: none; }
   .code pre { white-space: pre-wrap; word-break: break-all; }
