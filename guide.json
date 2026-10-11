@@ -1,6 +1,6 @@
 {
  "title": "Keyboard shell (top case) transplant: MacBook Pro 15\" Touch Bar (A1707)",
- "summary": "This guide replaces the keyboard on a MacBook Pro 15\" Touch Bar (A1707) by swapping the whole shell. The keyboard is riveted into the shell, so it cannot be replaced on its own. The shell is what Apple and iFixit call the top case: the bottom half when the lid is open. A used one with every part fitted is about £60 on eBay. That is more than a bare keyboard, but the swap is likely the easier job.\n\nMove the logic board, display and Touch ID button from the old shell into the replacement, which comes with the fans, battery, speakers, trackpad, battery board and microphone already fitted. About 3–4 hours.",
+ "summary": "The keyboard on this MacBook is riveted into the top case: the metal shell that also holds the trackpad, battery and speakers. A new keyboard means a new top case. Used ones with every part already fitted sell for about £60 on eBay, so this guide swaps the shell rather than the keyboard: the logic board, display and Touch ID button move from the old shell into the new one. About 3–4 hours.",
  "needs": [
   "[This toolkit](https://www.amazon.co.uk/dp/B09FFCGLHK) has every bit and tool below except the hair dryer (no affiliation)",
   "P5 pentalobe (bit ★1.2)",
