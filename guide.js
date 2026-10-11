@@ -171,6 +171,7 @@ function render(guide, state) {
         <div class="labels">${names(guide).map(name =>
           `<p class="label" data-label="${escape(name ?? '')}">${escape(name ?? 'Steps')}</p>`).join('')}</div>
       </footer>
+      <footer class="way in-list"><a class="back" href="#">Back</a><a class="next" href="#">Done, next step</a></footer>
     </aside>
     <main>${overviewHTML(guide)}${guide.steps.map((s, place) => stepHTML(guide, s, place)).join('')}
       <footer class="way"><a class="back" href="#">Back</a><a class="next" href="#">Done, next step</a></footer>
@@ -235,8 +236,8 @@ function render(guide, state) {
   });
   document.addEventListener('keydown', event => {
     if (event.target.matches('input, textarea')) return;
-    if (event.key === 'ArrowRight') document.querySelector('.way .next').click();
-    if (event.key === 'ArrowLeft') document.querySelector('.way .back').click();
+    if (event.key === 'ArrowRight') document.querySelector('main .way .next').click();
+    if (event.key === 'ArrowLeft') document.querySelector('main .way .back').click();
   });
 
   if (!location.hash) {
@@ -275,9 +276,9 @@ function show(guide, state) {
   document.querySelectorAll('main > article').forEach(a => { a.hidden = a.id !== id; });
   document.querySelectorAll('aside .row').forEach(row => row.classList.toggle('here',
     row.dataset.row === String(at) || (at === 'overview' && row.classList.contains('overview-row'))));
-  document.querySelector('.way .back').hidden = at === 'overview';
-  const next = document.querySelector('.way .next');
-  next.textContent = at === 'overview' ? 'Start' : nextShown(guide, at, state.chosen) === null ? 'Done' : 'Done, next step';
+  document.querySelectorAll('.way .back').forEach(back => { back.hidden = at === 'overview'; });
+  const label = at === 'overview' ? 'Start' : nextShown(guide, at, state.chosen) === null ? 'Done' : 'Done, next step';
+  document.querySelectorAll('.way .next').forEach(next => { next.textContent = label; });
   // The list shows the section of the step at hand; the footer can show another without leaving the step.
   showSection(typeof at === 'number' ? (guide.steps[at].section ?? '') : (guide.steps[0]?.section ?? ''));
   document.querySelector('nav .here')?.scrollIntoView({ block: 'nearest' });

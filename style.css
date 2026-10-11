@@ -175,9 +175,11 @@ figure:not([hidden]) { animation: fade 0.3s ease both; }
 }
 
 /* Tablets and phones: the list folds into a bar across the top, opened by Steps; the step takes the full width. */
-.steps-toggle { display: none; }
+.steps-toggle, .way.in-list { display: none; }
 @media (max-width: 1024px) {
-  aside { top: 10px; left: 10px; right: 10px; width: auto; max-height: calc(100vh - 20px); }
+  aside { top: auto; bottom: 10px; left: 10px; right: 10px; width: auto; max-height: calc(100vh - 20px); }
+  main > .way { display: none; }
+  .way.in-list { display: flex; padding: 4px 14px 14px; }
   .head { padding: 12px 14px 10px; display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: center; }
   .head .guide-title { grid-column: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.95rem; }
   .head .progress { grid-column: 1; margin: 0; }
@@ -190,11 +192,11 @@ figure:not([hidden]) { animation: fade 0.3s ease both; }
   .list-open .pages { display: block; grid-column: 1 / -1; }
   .list-open nav { display: block; max-height: 60vh; animation: fade 0.25s ease both; }
   .bar { padding: 8px 14px 10px; }
-  main { padding: 118px 24px 0; max-width: none; }
+  main { padding: 28px 24px 196px; max-width: none; }
   .code pre { white-space: pre-wrap; word-break: break-all; }
 }
 @media (max-width: 760px) {
-  main { padding: 112px 14px 0; }
+  main { padding: 20px 14px 196px; }
   .step h1 { font-size: 1.35rem; }
   .needs, .parts ul { columns: 1; }
   figure img, .video .play img, .video iframe { max-height: 34vh; }
