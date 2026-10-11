@@ -16,15 +16,15 @@
   "A sheet of paper and a pen, for the screws (or a magnetic mat)"
  ],
  "cautions": [
-  "Keep every screw: as each step takes screws out, put them in a box on your sheet marked with that step's number. They go back in reverse, from the same boxes.",
-  "Touch ID only works with your original logic board. A torn ribbon kills it permanently.",
+  "Keep every screw: as each step takes screws out, put them in a box on the sheet marked with that step's number. They go back in reverse, from the same boxes.",
+  "Touch ID only works with the original logic board. A torn ribbon kills it permanently.",
   "Battery power connector off before touching anything else.",
   "Never mix screws: several sizes differ by 0.1 mm."
  ],
  "steps": [
   {
    "title": "Disable Auto Boot",
-   "text": "This MacBook powers on when you open the lid. In Terminal, before shutting down:\n\n`sudo nvram AutoBoot=%00`\n\nYou turn it back on in the last step.\n\n**Why:** This laptop switches itself on when you open the lid or connect power. You will open and close the lid many times, and reconnect the battery near the end. With Auto Boot on, the board can power up while you are holding a connector or a metal screwdriver near it. That can short and kill the board. Run the command **on the laptop you are repairing**, not on this Mac.",
+   "text": "This MacBook powers on when the lid opens. In Terminal, before shutting down:\n\n`sudo nvram AutoBoot=%00`\n\nTurn it back on in the last step.\n\n**Why:** This laptop switches itself on when the lid opens or power is connected. The lid opens and closes many times during the repair, and the battery is reconnected near the end. With Auto Boot on, the board can power up while a connector is in hand or a metal screwdriver is near it. That can short and kill the board. Run the command **on the laptop being repaired**.",
    "images": [
     {
      "url": "photos/dLTjRC36EADiCFBK.jpg",
@@ -42,15 +42,15 @@
   },
   {
    "title": "Check the new shell has every part fitted",
-   "text": "This guide is for a replacement top case that comes with all six of these already fitted:\n\n- Both fans\n- The battery (all six cells), stuck down\n- Both speakers (the boxes with grilles at the hinge corners)\n- The trackpad, with its ribbon cable\n- The battery board (the small board at the battery's edge, with the data cable)\n- The microphone (a short ribbon ending beside a fan, with a black pull tab)\n\nCheck yours has every one before you start, and that the battery cells are flat, with no swelling at the corners. If any part is missing, this guide doesn't cover moving it across.\n\n**Why:** Parts that sit under other parts must go in first. Finding a missing part at the end means taking everything out again.",
-   "warning": "Each of these costs a full teardown if you only find out at the end.",
+   "text": "This guide is for a replacement top case that comes with all six of these already fitted:\n\n- Both fans\n- The battery (all six cells), stuck down\n- Both speakers (the boxes with grilles at the hinge corners)\n- The trackpad, with its ribbon cable\n- The battery board (the small board at the battery's edge, with the data cable)\n- The microphone (a short ribbon ending beside a fan, with a black pull tab)\n\nCheck every one is there before starting, and that the battery cells are flat, with no swelling at the corners. If any part is missing, this guide doesn't cover moving it across.\n\n**Why:** Parts that sit under other parts must go in first. Finding a missing part at the end means taking everything out again.",
+   "warning": "A missing part found at the end costs a full teardown.",
    "section": "Taking it apart",
    "check": "All six parts fitted, and the cells are flat.",
    "images": []
   },
   {
    "title": "Set up a sheet for the screws",
-   "text": "Lay a sheet of paper next to the laptop. Each time a step takes screws out, draw a box for it, write the step number and the screw length in it, and put the screws in that box. Steps with two lengths get two boxes.\n\n**Why:** Many screws look the same but differ by a fraction of a millimetre. A screw that is too long can drill through the board underneath. The boxes show where each one came from, and you work back through them in reverse when you rebuild.",
+   "text": "Lay a sheet of paper next to the laptop. Each time a step takes screws out, draw a box for it, write the step number and the screw length in it, and put the screws in that box. Steps with two lengths get two boxes.\n\n**Why:** Many screws look the same but differ by a fraction of a millimetre. A screw that is too long can drill through the board underneath. The boxes show where each one came from. Work back through them in reverse to rebuild.",
    "warning": "Several sizes differ by 0.1–0.2 mm. A long screw in a short hole punches through the board.",
    "section": "Taking it apart",
    "check": "Paper and pen beside the laptop.",
@@ -100,7 +100,7 @@
   },
   {
    "title": "Release the two side clips",
-   "text": "Slide an opening pick into the gap, then around the nearest corner and halfway up the side until the clip pops. Repeat on the other side.\n\n**Why:** Hidden clips hold the case along the sides. If you pull the case off before they release, they bend or break and the case will not sit flat again.",
+   "text": "Slide an opening pick into the gap, then around the nearest corner and halfway up the side until the clip pops. Repeat on the other side.\n\n**Why:** Hidden clips hold the case along the sides. Pulled off before they release, they bend or break and the case won't sit flat again.",
    "images": [
     {
      "url": "photos/CIMWfGuyrYGngcBl.jpg",
@@ -119,7 +119,7 @@
   },
   {
    "title": "Slide the lower case off toward you",
-   "text": "Get your fingertips under the front edge and pull firmly **away from the hinge**, one corner at a time. If it sticks at the hinge, lever it from the hinge cutout near the headphone jack with the flat end of the spudger.\n\n**Why:** The clips at the hinge end are hooks. They release when you slide the case, and they snap off when you lift it.",
+   "text": "Get fingertips under the front edge and pull firmly **away from the hinge**, one corner at a time. If it sticks at the hinge, lever it from the hinge cutout near the headphone jack with the flat end of the spudger.\n\n**Why:** The clips at the hinge end are hooks. They release when the case slides, and snap off when it lifts.",
    "images": [
     {
      "url": "photos/SUXHrYyCaAOVvcMN.jpg",
@@ -136,7 +136,7 @@
   },
   {
    "title": "Peel off the battery board cover",
-   "text": "The large rectangular cover on the board edge nearest the battery. Warm it with the hair dryer if it resists.\n\n**Why:** The battery's cables are under this cover. You must disconnect the battery before you touch anything else.",
+   "text": "The large rectangular cover on the board edge nearest the battery. Warm it with the hair dryer if it resists.\n\n**Why:** The battery's cables are under this cover. Disconnect the battery before touching anything else.",
    "images": [
     {
      "url": "photos/ocQPFYqHXXonU4nL.jpg",
@@ -151,7 +151,7 @@
   },
   {
    "title": "Disconnect the battery data cable",
-   "text": "Peel back the tape, flip up the **ZIF locking flap** with the spudger, then slide the cable out parallel to the board.\n\n**Why:** This is the first half of cutting the battery off from the board, so nothing has power while you work.",
+   "text": "Peel back the tape, flip up the **ZIF locking flap** with the spudger, then slide the cable out parallel to the board.\n\n**Why:** This is the first half of cutting the battery off from the board, so nothing has power during the work.",
    "images": [
     {
      "url": "photos/fElQdCLEnZnaiBFq.jpg",
@@ -166,7 +166,7 @@
   },
   {
    "title": "Disconnect the battery power connector",
-   "text": "Remove the pancake screw, then lift the connector with the spudger.\n\n**Why:** This cuts the power completely. Every connector you unplug after this is safe to touch. If you skip it, unplugging a live connector can short and damage the board.",
+   "text": "Remove the pancake screw, then lift the connector with the spudger.\n\n**Why:** This cuts the power completely. Every connector unplugged after this is safe to touch. Skip it, and unplugging a live connector can short and damage the board.",
    "images": [
     {
      "url": "maps/battery-conn.svg",
@@ -188,7 +188,7 @@
      "where": "battery connector"
     }
    ],
-   "warning": "Lift it high enough that it can't drop back onto its socket. If it touches while you work, it can destroy the logic board.",
+   "warning": "Lift it high enough that it can't drop back onto its socket. If it touches during the work, it can destroy the logic board.",
    "check": "Connector held clear of its socket.",
    "section": "Taking it apart"
   },
@@ -285,7 +285,7 @@
      "where": "screw posts"
     }
    ],
-   "warning": "Nine tiny washers sit loose on the posts. Count all nine before you move on.",
+   "warning": "Nine tiny washers sit loose on the posts. Count all nine before moving on.",
    "check": "Trackpad out, nine washers accounted for.",
    "section": "Taking it apart"
   },
@@ -602,7 +602,7 @@
   },
   {
    "title": "Lift the fan dampers",
-   "text": "Peel the two rubber vibration strips up off the fans, but leave them attached.\n\n**Why:** The rubber strips overlap the board edge. If you leave them stuck down, the board catches on them.",
+   "text": "Peel the two rubber vibration strips up off the fans, but leave them attached.\n\n**Why:** The rubber strips overlap the board edge. Left stuck down, they catch the board.",
    "images": [
     {
      "url": "photos/yKQSfsrjjeryl2xE.jpg",
@@ -617,7 +617,7 @@
   },
   {
    "title": "Lift the logic board out",
-   "text": "Lever the left edge up with the spudger and lift the board away from the left.\n\n**Why:** The board is the core part that moves into the new case, and it must be out before you can reach the display hinges.",
+   "text": "Lever the left edge up with the spudger and lift the board away from the left.\n\n**Why:** The board moves into the new case, and must be out before the display hinges can be reached.",
    "images": [
     {
      "url": "photos/bcluJR2UCXLJxgfb.jpg",
@@ -628,7 +628,7 @@
      "credit": "iFixit · CC BY-NC-SA"
     }
    ],
-   "warning": "It should come out with no resistance. If it snags, stop and find the cable you missed.",
+   "warning": "It should come out with no resistance. If it snags, stop and find the cable still connected.",
    "check": "Board out, Touch ID flex still attached to the old case and unstrained.",
    "section": "Taking it apart"
   },
@@ -686,7 +686,7 @@
   },
   {
    "title": "Lift the antenna assembly off",
-   "text": "The antenna assembly is **one long bar across the whole hinge edge**, hinge to hinge. iFixit's photos show only one end close up.\n\n1. Start at one end, by a hinge. Slide the pick under the bar and lift straight up.\n2. Work along the bar a little at a time, lifting each time. Do not slide the pick along under it.\n3. Take extra care in the middle: the display ribbons pass under the bar there.\n4. Lift the bar away with its cable bundle. With the logic board out, there is no heat sink to feed the bundle under.\n\nIf it will not lift, a screw is still in. Count 16 P2 screws for step 31, and check both ends by the hinge brackets. No adhesive is used here; if all 16 are out and it still grips, a minute of hair dryer on low along the bar is safe.\n\n**Why:** With it off, you can reach the hinges to free the screen.",
+   "text": "The antenna assembly is **one long bar across the whole hinge edge**, hinge to hinge. iFixit's photos show only one end close up.\n\n1. Start at one end, by a hinge. Slide the pick under the bar and lift straight up.\n2. Work along the bar a little at a time, lifting each time. Do not slide the pick along under it.\n3. Take extra care in the middle: the display ribbons pass under the bar there.\n4. Lift the bar away with its cable bundle. With the logic board out, there is no heat sink to feed the bundle under.\n\nIf it will not lift, a screw is still in. Count 16 P2 screws for step 31, and check both ends by the hinge brackets. No adhesive is used here; if all 16 are out and it still grips, a minute of hair dryer on low along the bar is safe.\n\n**Why:** With it off, the hinges can be reached to free the screen.",
    "images": [
     {
      "url": "photos/Jr4ErSg43xIDvWTZ.jpg",
@@ -729,7 +729,7 @@
   },
   {
    "title": "Remove two screws from each hinge",
-   "text": "Leave the third screw in each hinge for now.\n\n**Why:** The third screw keeps the screen attached while you get ready, so it does not fall.",
+   "text": "Leave the third screw in each hinge for now.\n\n**Why:** The third screw keeps the screen attached until the last step, so it doesn't fall.",
    "images": [
     {
      "url": "maps/hinges-a-2.svg",
@@ -802,7 +802,7 @@
   },
   {
    "title": "Touch ID: remove the backplate",
-   "text": "The button sits in the corner by the hinge, at the end of the Touch Bar. A small backplate holds it in.\n\n1. Check the new shell's Touch ID recess for a **small round silver disc** where the button's bottom rests. Note whether it is there.\n2. On the old case, remove the backplate's **six T3 screws**. Four silver ones are in the corners; two are black. Keep the colours apart.\n3. Lift the backplate off.\n\nSource: LaptopScreen.com's A1707 top case video, 7:36 ([watch](https://www.youtube.com/watch?v=rPW1-fsIVn4&t=456s)).\n\n**Why:** Touch ID only works with your original logic board, so your own button must move.",
+   "text": "The button sits in the corner by the hinge, at the end of the Touch Bar. A small backplate holds it in.\n\n1. Check the new shell's Touch ID recess for a **small round silver disc** where the button's bottom rests. Note whether it is there.\n2. On the old case, remove the backplate's **six T3 screws**. Four silver ones are in the corners; two are black. Keep the colours apart.\n3. Lift the backplate off.\n\nSource: LaptopScreen.com's A1707 top case video, 7:36 ([watch](https://www.youtube.com/watch?v=rPW1-fsIVn4&t=456s)).\n\n**Why:** Touch ID only works with the original logic board, so the original button must move.",
    "images": [
     {
      "url": "maps/touchid-plate-2.svg",
@@ -1001,7 +1001,7 @@
   },
   {
    "title": "Lower the logic board in",
-   "text": "Before the board goes in, check every cable that will plug into it lies **outside** the board's area, folded back toward the case edges. None may end up underneath:\n\n- **Antenna bundle** (three thin wires) and the **display board flex**, at the hinge edge\n- **Touch ID** and the **headphone jack**, in the hinge corner on the Touch ID side\n- **Touch Bar display** and **Touch Bar digitizer** cables, at the other hinge corner\n- Both **Thunderbolt flexes**, along each side edge\n- Both **fan** cables and the **microphone** ribbon, beside the fans\n- Both **speaker** cables, at the speaker boxes\n- The **keyboard**, **trackpad** and **battery data** cables, along the battery's edge\n\nThen:\n\n1. Check the two rubber dampers on the board edge sit flat.\n2. Hold the board by its edges. Gently pinch the antenna bundle together and guide it under the heat pipe as you lower the board. Use a tool to help it through; never force it.\n3. Lower it right edge first, then the left, into its place between the fans.\n4. Look round every edge: each cable from the list should be visible, not under the board.",
+   "text": "Before the board goes in, check every cable that will plug into it lies **outside** the board's area, folded back toward the case edges. None may end up underneath:\n\n- **Antenna bundle** (three thin wires) and the **display board flex**, at the hinge edge\n- **Touch ID** and the **headphone jack**, in the hinge corner on the Touch ID side\n- **Touch Bar display** and **Touch Bar digitizer** cables, at the other hinge corner\n- Both **Thunderbolt flexes**, along each side edge\n- Both **fan** cables and the **microphone** ribbon, beside the fans\n- Both **speaker** cables, at the speaker boxes\n- The **keyboard**, **trackpad** and **battery data** cables, along the battery's edge\n\nThen:\n\n1. Check the two rubber dampers on the board edge sit flat.\n2. Hold the board by its edges. Gently pinch the antenna bundle together and guide it under the heat pipe while lowering the board. Use a tool to help it through; never force it.\n3. Lower it right edge first, then the left, into its place between the fans.\n4. Look round every edge: each cable from the list should be visible, not under the board.",
    "images": [
     {
      "url": "maps/cables-clear.svg",
@@ -1023,7 +1023,7 @@
   },
   {
    "title": "Fit four logic board screws to hold it",
-   "text": "**Before anything is screwed down for good, you test the machine.** Next you connect every cable, power it on and check everything works (the test is the last step of this part). Only then do the brackets and the other screws go in.\n\nFor that test, four screws hold the board, so a connector can still be reseated easily if something fails:\n\n- **T8 3.9 mm** (left, by the hinge) and **T8 3.8 mm** (right, by the hinge)\n- **T3 2.8 mm ×2** (the two near the battery)\n\nNudge the board until the connectors line up with their sockets, then tighten these four snugly.\n\n**Why:** The board can't shift while you connect and test, and little has to be undone if something fails.",
+   "text": "**Test the machine before screwing anything down for good.** Connect every cable, power it on and check everything works (the test is the last step of this part). Only then do the brackets and the other screws go in.\n\nFor that test, four screws hold the board, so a connector can still be reseated easily if something fails:\n\n- **T8 3.9 mm** (left, by the hinge) and **T8 3.8 mm** (right, by the hinge)\n- **T3 2.8 mm ×2** (the two near the battery)\n\nNudge the board until the connectors line up with their sockets, then tighten these four snugly.\n\n**Why:** The board can't shift during connecting and testing, and little has to be undone if something fails.",
    "images": [
     {
      "url": "maps/logic-board-test.svg",
@@ -1513,7 +1513,7 @@
   },
   {
    "title": "Close up and restore Auto Boot",
-   "text": "Hook the hinge-end clips first, slide toward the hinge, press the clips home, then refit the six P5 screws at the **slight angle** they came out at: the 6.6 mm pair on the hinge edge. In Terminal:\n\n`sudo nvram AutoBoot=%03`\n\nIf anything misbehaves, reset the SMC before assuming damage.\n\n**Why:** Auto Boot is what makes the laptop start when you open the lid. Turn it back on so it behaves normally.",
+   "text": "Hook the hinge-end clips first, slide toward the hinge, press the clips home, then refit the six P5 screws at the **slight angle** they came out at: the 6.6 mm pair on the hinge edge. In Terminal:\n\n`sudo nvram AutoBoot=%03`\n\nIf anything misbehaves, reset the SMC before assuming damage.\n\n**Why:** Auto Boot makes the laptop start when the lid opens. Turn it back on so it behaves normally.",
    "images": [
     {
      "url": "maps/lowercase.svg",
@@ -1531,7 +1531,7 @@
    "title": "Finished",
    "section": "Putting it back together",
    "subsection": "Finish",
-   "text": "The old keyboard is gone and the machine is back together, with your own Touch ID still working.\n\n- Your sheet should now be empty of screws. If a box still has any, find the step it belongs to before using the laptop.\n- The old top case keeps the parts that stayed behind. Recycle it, ideally its battery separately at a battery drop-off.\n\n**Thanks to** iFixit for the take-apart guides and photos this is built on (CC BY-NC-SA 3.0), and LaptopScreen.com for the video the Touch ID transfer follows. The full list is under Overview, sources and credits.\n\n**Help extend this guide.** If you've done this with a shell that arrived without some parts fitted, or spotted a mistake, contributions are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
+   "text": "The machine is back together in its new top case, with the original Touch ID still working.\n\n- The screw sheet should now be empty. If a box still has any, find the step it belongs to before using the laptop.\n- The old top case keeps the parts that stayed behind. Recycle it, ideally its battery separately at a battery drop-off.\n\n**Thanks to** iFixit for the take-apart guides and photos this is built on (CC BY-NC-SA 3.0), and LaptopScreen.com for the video the Touch ID transfer follows. The full list is under Overview, sources and credits.\n\n**Help extend this guide.** Steps for shells that arrive without some parts fitted, and corrections, are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
    "check": "Laptop working, sheet empty.",
    "images": []
   }
@@ -1539,7 +1539,7 @@
  "publish": {
   "project": "a1707-guide",
   "credits": [
-   "**Help extend this guide.** It only covers shells that arrive with every part fitted. If you've moved the fans, battery, speakers, trackpad, battery board or microphone into a bare shell, or spotted a mistake, contributions are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
+   "**Help extend this guide.** It only covers shells that arrive with every part fitted. Steps for moving the fans, battery, speakers, trackpad, battery board or microphone into a bare shell, and corrections, are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
    "Steps for taking the machine apart are adapted from iFixit's MacBook Pro 15\" Touch Bar Late 2016 [Battery](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Battery+Replacement/112876), [Screen](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Screen+Replacement/122604) and [Trackpad](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Trackpad+Replacement/121428) guides.",
    "The Touch ID transfer follows [LaptopScreen.com's A1707 teardown video](https://www.youtube.com/watch?v=rPW1-fsIVn4&t=456s).",
    "Screw maps and diagrams are drawn for this guide.",
