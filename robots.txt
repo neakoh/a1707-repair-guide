@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://a1707-repair-guide.neakoh.workers.dev/sitemap.xml

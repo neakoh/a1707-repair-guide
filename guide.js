@@ -161,9 +161,9 @@ function listHTML(guide) {
     </div>`).join('')}`;
 }
 
-function render(guide, state) {
-  document.title = guide.title;
-  document.body.innerHTML = `
+/** The page's whole markup: the step list and every step, as the build writes it into the HTML. */
+export function pageHTML(guide) {
+  return `
     <aside>
       <div class="head"><button class="steps-toggle" type="button" aria-label="Show the steps">Steps</button>
         <p class="guide-title">${escape(guide.title)}</p><p class="progress"></p>
@@ -180,6 +180,11 @@ function render(guide, state) {
     <main>${overviewHTML(guide)}${guide.steps.map((s, place) => stepHTML(guide, s, place)).join('')}
       <footer class="way"><a class="back" href="#">← Back</a><a class="next" href="#">Done, next step →</a></footer>
     </main>`;
+}
+
+function render(guide, state) {
+  document.title = guide.title;
+  if (!document.querySelector('aside')) document.body.innerHTML = pageHTML(guide);
 
   const go = target => { location.hash = target; };
   window.addEventListener('hashchange', () => show(guide, state, true));
