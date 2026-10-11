@@ -119,9 +119,8 @@ function stepHTML(guide, step, place) {
   const options = (guide.options ?? []).filter(o => step.asks?.includes(o.id));
   return `<article class="step" id="step-${place}" data-place="${place}" hidden>
     <header class="step-head">
-      <span class="number"></span>
-      <div>${step.section ? `<p class="section-name">${escape([step.section, step.subsection].filter(Boolean).join(' · '))}</p>` : ''}
-        <h1>${escape(step.title)}</h1></div>
+      ${step.section ? `<p class="section-name">${escape([step.section, step.subsection].filter(Boolean).join(' · '))}</p>` : ''}
+      <h1>${escape(step.title)}</h1>
     </header>
     ${pictures(step.images, step.video)}
     <div class="body">
@@ -311,7 +310,6 @@ function update(guide, state) {
     row.querySelector('[data-done]').checked = state.done.has(place);
     row.classList.toggle('done', state.done.has(place));
     const article = document.getElementById(`step-${place}`);
-    article.querySelector('.number').textContent = n;
     article.querySelectorAll('[data-option]').forEach(box => { box.checked = state.chosen.has(box.dataset.option); });
     const box = article.querySelector('.box');
     if (box) box.textContent = n;

@@ -224,9 +224,7 @@ figure:not([hidden]) { animation: fade 180ms var(--ease-out) both; }
 :root { --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent); }
 h1, h2, h3, .guide-title { letter-spacing: -0.022em; }
 .step h1 { font-size: 1.85rem; font-weight: 640; line-height: 1.15; margin: 0; }
-.step-head { display: grid; grid-template-columns: auto 1fr; column-gap: 18px; align-items: end; margin-bottom: 24px; flex-shrink: 0; }
-.step-head .number { font-size: 3.4rem; line-height: 0.82; font-weight: 300; letter-spacing: -0.04em;
-  color: var(--accent); font-variant-numeric: tabular-nums; }
+.step-head { margin-bottom: 24px; flex-shrink: 0; }
 .step-head .section-name { margin: 0 0 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .overview > h1 { font-size: 2.1rem; font-weight: 700; margin-bottom: 18px; }
 .guide-title { font-weight: 650; }
@@ -269,9 +267,7 @@ figure.map img { background: #18181a; border-color: var(--line); }
 .way .back { color: var(--soft); border-color: var(--line); background: transparent; }
 .way .next { background: var(--accent); color: #fff; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset; }
 @media (max-width: 760px) {
-  .step-head { column-gap: 12px; }
-  .step-head .number { font-size: 2.4rem; }
-  .step h1 { font-size: 1.3rem; }
+    .step h1 { font-size: 1.3rem; }
   .screws { min-width: 0; width: 100%; }
   .screws .name { white-space: normal; }
 }
