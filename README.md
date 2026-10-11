@@ -1,6 +1,6 @@
 # Keyboard shell (top case) transplant: MacBook Pro 15" Touch Bar (A1707)
 
-**Read it at https://a1707-repair-guide.nickymain1213.workers.dev**
+**Read it at https://a1707-repair-guide.neakoh.workers.dev**
 
 A step-by-step guide to replacing the keyboard on a MacBook Pro 15" Touch Bar by swapping its shell (the top case, which the keyboard is riveted into): moving the logic board, display and Touch ID button from an old MacBook Pro 15" (2016–2017, A1707) into a replacement top case, with Touch ID still working afterwards. Screw maps, a "connect and test before screwing down" rebuild, and the Touch ID transfer, which no other written guide covers.
 
