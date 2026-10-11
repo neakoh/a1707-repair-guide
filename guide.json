@@ -1537,7 +1537,7 @@
   }
  ],
  "publish": {
-  "project": "a1707-guide",
+  "project": "a1707-repair-guide",
   "credits": [
    "**Help extend this guide.** It only covers shells that arrive with every part fitted. Steps for moving the fans, battery, speakers, trackpad, battery board or microphone into a bare shell, and corrections, are welcome at [github.com/neakoh/a1707-repair-guide](https://github.com/neakoh/a1707-repair-guide).",
    "Steps for taking the machine apart are adapted from iFixit's MacBook Pro 15\" Touch Bar Late 2016 [Battery](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Battery+Replacement/112876), [Screen](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Screen+Replacement/122604) and [Trackpad](https://www.ifixit.com/Guide/MacBook+Pro+15-Inch+Touch+Bar+Late+2016+Trackpad+Replacement/121428) guides.",
