@@ -13,8 +13,10 @@
 a, button, label, input, .row, .part, .label, .pictures figure img { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
 button, .way a, .row, .steps-toggle, .part, .label { -webkit-user-select: none; user-select: none; }
 html, body { height: 100%; }
+@font-face { font-family: "Inter"; src: url("fonts/InterVariable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 body { margin: 0; background: var(--paper); color: var(--ink);
-       font: 16px/1.6 -apple-system, "Inter", "Segoe UI", system-ui, sans-serif; }
+       font: 16px/1.6 "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+       font-feature-settings: "cv11", "ss01", "ss03"; -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); }
 code { font: 0.88em ui-monospace, "SF Mono", Menlo, monospace; background: var(--tint); padding: 1px 5px; border-radius: 4px; }
 /* A command to copy: its own panel, monospace, with a copy button. */
@@ -214,3 +216,60 @@ figure:not([hidden]) { animation: fade 180ms var(--ease-out) both; }
   figure img, .video .play img, .video iframe { max-height: 34vh; }
   .labels { display: none; }
 }
+
+/* ---- The look: type-led hierarchy, a step's number as its anchor, quiet structure. ---- */
+:root { --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent); }
+h1, h2, h3, .guide-title { letter-spacing: -0.022em; }
+.step h1 { font-size: 1.85rem; font-weight: 680; line-height: 1.15; margin: 0; }
+.step-head { display: grid; grid-template-columns: auto 1fr; column-gap: 18px; align-items: end; margin-bottom: 24px; flex-shrink: 0; }
+.step-head .number { font-size: 3.4rem; line-height: 0.82; font-weight: 300; letter-spacing: -0.04em;
+  color: var(--accent); font-variant-numeric: tabular-nums; }
+.step-head .section-name { margin: 0 0 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
+.overview > h1 { font-size: 2.1rem; font-weight: 700; margin-bottom: 18px; }
+.guide-title { font-weight: 650; }
+
+/* The list: numbers in their own column, the current step marked by a bar of accent. */
+nav .row a { display: grid; grid-template-columns: 1.7em 1fr; column-gap: 6px; }
+nav .row .number { color: var(--faint); font-variant-numeric: tabular-nums; text-align: right; }
+.row { position: relative; border-radius: 6px; }
+.row.here { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
+.row.here::before { content: ""; position: absolute; left: -2px; top: 7px; bottom: 7px; width: 3px; border-radius: 2px; background: var(--accent); }
+.row.here .number { color: var(--accent); }
+.section-head { color: var(--ink); opacity: 0.55; }
+.subsection { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.68rem; color: var(--faint); margin-top: 16px; }
+
+/* Words, warnings and screws. */
+.words { font-size: 1.02rem; }
+.words strong { font-weight: 640; }
+.warning { display: flex; gap: 10px; padding: 11px 14px; border-radius: 9px; font-weight: 500;
+  background: color-mix(in srgb, var(--warn) 9%, transparent); border: 1px solid color-mix(in srgb, var(--warn) 28%, transparent); }
+.warning::before { content: none; }
+.warning .mark { flex-shrink: 0; }
+.parts { margin-top: 18px; }
+.screws { width: auto; min-width: 320px; margin: 2px 0 0; border-collapse: collapse; font-size: 0.95rem; }
+.screws td { padding: 7px 18px 7px 0; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+.screws tr:last-child td { border-bottom: 0; }
+.screws .count { font-variant-numeric: tabular-nums; font-weight: 650; color: var(--accent); padding-right: 12px; white-space: nowrap; }
+.screws .name { font-weight: 560; white-space: nowrap; }
+.screws .where { color: var(--faint); }
+.check { display: flex; gap: 8px; }
+.check::before { content: "✓"; color: var(--good); font-weight: 700; }
+
+/* Pictures: the map in a quiet frame, the thumbnails smaller and calmer. */
+.pictures { margin-bottom: 22px; }
+figure.map img { background: #18181a; border-color: var(--line); }
+.thumbs img { width: 72px; height: 50px; }
+.thumbs button { opacity: 0.55; }
+
+/* The way on: a clear primary, a quiet secondary. */
+.way a { padding: 10px 18px; border-radius: 9px; }
+.way .back { color: var(--soft); border-color: var(--line); background: transparent; }
+.way .next { background: var(--accent); color: #fff; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset; }
+@media (max-width: 760px) {
+  .step-head { column-gap: 12px; }
+  .step-head .number { font-size: 2.4rem; }
+  .step h1 { font-size: 1.3rem; }
+  .screws { min-width: 0; width: 100%; }
+  .screws .name { white-space: normal; }
+}
+@media (prefers-color-scheme: dark) { .way .next { color: #0d1430; } }

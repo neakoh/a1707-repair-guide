@@ -118,15 +118,20 @@ function pictures(images, video) {
 function stepHTML(guide, step, place) {
   const options = (guide.options ?? []).filter(o => step.asks?.includes(o.id));
   return `<article class="step" id="step-${place}" data-place="${place}" hidden>
-    ${step.section ? `<p class="section-name">${escape([step.section, step.subsection].filter(Boolean).join(' · '))}</p>` : ''}
-    <h1><span class="number"></span>. ${escape(step.title)}</h1>
+    <header class="step-head">
+      <span class="number"></span>
+      <div>${step.section ? `<p class="section-name">${escape([step.section, step.subsection].filter(Boolean).join(' · '))}</p>` : ''}
+        <h1>${escape(step.title)}</h1></div>
+    </header>
     ${pictures(step.images, step.video)}
     <div class="body">
     ${step.text ? `<div class="words">${markdown(step.text)}</div>` : ''}
     ${options.length ? `<fieldset class="choices">${options.map(o =>
       `<label><input type="checkbox" data-option="${o.id}"><span>${escape(o.label)}${o.detail ? `<small>${escape(o.detail)}</small>` : ''}</span></label>`).join('')}</fieldset>` : ''}
-    ${step.warning ? `<p class="warning">${inline(step.warning)}</p>` : ''}
-    ${step.parts?.length ? `<div class="parts"><h4>Comes out · onto the spot marked step <span class="box"></span></h4><ul>${step.parts.map(p => `<li>${partLine(p)}</li>`).join('')}</ul></div>` : ''}
+    ${step.warning ? `<p class="warning"><span class="mark">⚠</span><span>${inline(step.warning)}</span></p>` : ''}
+    ${step.parts?.length ? `<div class="parts"><h4>Comes out · onto the spot marked step <span class="box"></span></h4>
+      <table class="screws"><tbody>${step.parts.map(p => `<tr><td class="count">${p.count ?? ''}${p.count ? '×' : ''}</td>
+        <td class="name">${escape(p.name)}</td><td class="where">${escape(p.where ?? '')}</td></tr>`).join('')}</tbody></table></div>` : ''}
     ${step.check ? `<p class="check">Done when: ${inline(step.check)}</p>` : ''}
     </div>
   </article>`;
@@ -153,7 +158,7 @@ function listHTML(guide) {
       ${guide.steps.map((s, place) => (s.section ?? null) !== name ? '' :
         (s.subsection && s.subsection !== guide.steps[place - 1]?.subsection ? `<p class="subsection">${escape(s.subsection)}</p>` : '') +
         `<div class="row" data-row="${place}"><input type="checkbox" data-done="${place}" aria-label="Done">
-         <a href="#step-${place}"><span class="number"></span>. ${escape(s.title)}</a></div>`).join('')}
+         <a href="#step-${place}"><span class="number"></span><span class="row-title">${escape(s.title)}</span></a></div>`).join('')}
     </div>`).join('')}`;
 }
 
@@ -171,10 +176,10 @@ function render(guide, state) {
         <div class="labels">${names(guide).map(name =>
           `<p class="label" data-label="${escape(name ?? '')}">${escape(name ?? 'Steps')}</p>`).join('')}</div>
       </footer>
-      <footer class="way in-list"><a class="back" href="#">Back</a><a class="next" href="#">Done, next step</a></footer>
+      <footer class="way in-list"><a class="back" href="#">← Back</a><a class="next" href="#">Done, next step →</a></footer>
     </aside>
     <main>${overviewHTML(guide)}${guide.steps.map((s, place) => stepHTML(guide, s, place)).join('')}
-      <footer class="way"><a class="back" href="#">Back</a><a class="next" href="#">Done, next step</a></footer>
+      <footer class="way"><a class="back" href="#">← Back</a><a class="next" href="#">Done, next step →</a></footer>
     </main>`;
 
   const go = target => { location.hash = target; };
@@ -285,7 +290,7 @@ function show(guide, state) {
   document.querySelectorAll('aside .row').forEach(row => row.classList.toggle('here',
     row.dataset.row === String(at) || (at === 'overview' && row.classList.contains('overview-row'))));
   document.querySelectorAll('.way .back').forEach(back => { back.hidden = at === 'overview'; });
-  const label = at === 'overview' ? 'Start' : nextShown(guide, at, state.chosen) === null ? 'Done' : 'Done, next step';
+  const label = at === 'overview' ? 'Start →' : nextShown(guide, at, state.chosen) === null ? 'Done' : 'Done, next step →';
   document.querySelectorAll('.way .next').forEach(next => { next.textContent = label; });
   // The list shows the section of the step at hand; the footer can show another without leaving the step.
   showSection(typeof at === 'number' ? (guide.steps[at].section ?? '') : (guide.steps[0]?.section ?? ''));
