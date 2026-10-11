@@ -100,7 +100,7 @@ function videoSlide(video, i) {
     <figcaption>${escape(video.caption ?? 'Video')} · ${at(video.start ?? 0)}${video.end ? `–${at(video.end)}` : ''}${video.credit ? `<span class="where"> · ${escape(video.credit)}</span>` : ''}</figcaption></figure>`;
 }
 
-function pictures(images, video) {
+function pictures(images, video, title) {
   if (!images?.length && !video) return '';
   const all = [...(images ?? []), ...(video ? [{ video }] : [])];
   const big = all.map((image, i) => {
@@ -108,7 +108,7 @@ function pictures(images, video) {
     const caption = image.caption ? escape(image.caption) : '';
     const credit = image.credit ? `<a class="credit" href="#overview">Photo: ${escape(image.credit)}</a>` : '';
     return `<figure class="${image.url.endsWith('.svg') ? 'map' : 'photo'}" data-picture="${i}"${i ? ' hidden' : ''}>
-      <div class="frame"><img src="${image.url}" alt="${caption}" loading="lazy">${credit}</div>${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
+      <div class="frame"><img src="${image.url}" alt="${caption || escape(title)}" loading="lazy">${credit}</div>${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
   }).join('');
   const thumbs = all.length > 1 ? `<div class="thumbs">${all.map((image, i) =>
     `<button data-thumb="${i}" class="${[i ? '' : 'on', image.video ? 'is-video' : ''].join(' ').trim()}"><img src="${image.video ? `https://i.ytimg.com/vi/${image.video.youtube}/mqdefault.jpg` : image.url}" alt="" loading="lazy"></button>`).join('')}</div>` : '';
@@ -120,9 +120,9 @@ function stepHTML(guide, step, place) {
   return `<article class="step" id="step-${place}" data-place="${place}" hidden>
     <header class="step-head">
       ${step.section ? `<p class="section-name">${escape([step.section, step.subsection].filter(Boolean).join(' · '))}</p>` : ''}
-      <h1>${escape(step.title)}</h1>
+      <h1 tabindex="-1">${escape(step.title)}</h1>
     </header>
-    ${pictures(step.images, step.video)}
+    ${pictures(step.images, step.video, step.title)}
     <div class="body">
     ${step.text ? `<div class="words">${markdown(step.text)}</div>` : ''}
     ${options.length ? `<fieldset class="choices">${options.map(o =>
@@ -138,7 +138,7 @@ function stepHTML(guide, step, place) {
 
 function overviewHTML(guide) {
   return `<article class="step overview" id="overview" hidden>
-    <h1>${escape(guide.title)}</h1>
+    <h1 tabindex="-1">${escape(guide.title)}</h1>
     <div class="body">
     ${guide.summary ? `<p class="summary">${inline(guide.summary)}</p>` : ''}
     ${guide.needs?.length ? `<h2 class="label-h">You need</h2><ul class="needs">${guide.needs.map(n => `<li>${inline(n)}</li>`).join('')}</ul>` : ''}
@@ -156,7 +156,7 @@ function listHTML(guide) {
       <p class="section-head"><span>${escape(name ?? 'Steps')}</span><span class="count"></span></p>
       ${guide.steps.map((s, place) => (s.section ?? null) !== name ? '' :
         (s.subsection && s.subsection !== guide.steps[place - 1]?.subsection ? `<p class="subsection">${escape(s.subsection)}</p>` : '') +
-        `<div class="row" data-row="${place}"><input type="checkbox" data-done="${place}" aria-label="Done">
+        `<div class="row" data-row="${place}"><input type="checkbox" data-done="${place}" aria-label="Done: ${escape(s.title)}">
          <a href="#step-${place}"><span class="number"></span><span class="row-title">${escape(s.title)}</span></a></div>`).join('')}
     </div>`).join('')}`;
 }
@@ -168,12 +168,12 @@ function render(guide, state) {
       <div class="head"><button class="steps-toggle" type="button" aria-label="Show the steps">Steps</button>
         <p class="guide-title">${escape(guide.title)}</p><p class="progress"></p>
         <div class="pages"><a class="row overview-row" href="#overview">Overview, sources and credits</a></div></div>
-      <nav>${listHTML(guide)}</nav>
+      <nav aria-label="Steps">${listHTML(guide)}</nav>
       <footer class="bar">
         <div class="track">${names(guide).map(name =>
           `<span class="part" data-part="${escape(name ?? '')}"><span class="fill"></span></span>`).join('')}</div>
         <div class="labels">${names(guide).map(name =>
-          `<p class="label" data-label="${escape(name ?? '')}">${escape(name ?? 'Steps')}</p>`).join('')}</div>
+          `<button class="label" type="button" data-label="${escape(name ?? '')}">${escape(name ?? 'Steps')}</button>`).join('')}</div>
       </footer>
       <footer class="way in-list"><a class="back" href="#">← Back</a><a class="next" href="#">Done, next step →</a></footer>
     </aside>
@@ -182,7 +182,7 @@ function render(guide, state) {
     </main>`;
 
   const go = target => { location.hash = target; };
-  window.addEventListener('hashchange', () => show(guide, state));
+  window.addEventListener('hashchange', () => show(guide, state, true));
   document.body.addEventListener('change', event => {
     const box = event.target;
     if (box.dataset.done !== undefined) {
@@ -239,7 +239,7 @@ function render(guide, state) {
     }
   });
   document.addEventListener('keydown', event => {
-    if (event.target.matches('input, textarea')) return;
+    if (event.target.matches('input, textarea') || event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.key === 'ArrowRight') document.querySelector('main .way .next').click();
     if (event.key === 'ArrowLeft') document.querySelector('main .way .back').click();
   });
@@ -282,12 +282,15 @@ function current(guide) {
   return 'overview';
 }
 
-function show(guide, state) {
+function show(guide, state, moved = false) {
   const at = current(guide);
   const id = typeof at === 'number' ? `step-${at}` : at;
   document.querySelectorAll('main > article').forEach(a => { a.hidden = a.id !== id; });
-  document.querySelectorAll('aside .row').forEach(row => row.classList.toggle('here',
-    row.dataset.row === String(at) || (at === 'overview' && row.classList.contains('overview-row'))));
+  document.querySelectorAll('aside .row').forEach(row => {
+    const here = row.dataset.row === String(at) || (at === 'overview' && row.classList.contains('overview-row'));
+    row.classList.toggle('here', here);
+    if (here) row.setAttribute('aria-current', 'step'); else row.removeAttribute('aria-current');
+  });
   document.querySelectorAll('.way .back').forEach(back => { back.hidden = at === 'overview'; });
   const label = at === 'overview' ? 'Start →' : nextShown(guide, at, state.chosen) === null ? 'Done' : 'Done, next step →';
   document.querySelectorAll('.way .next').forEach(next => { next.textContent = label; });
@@ -296,6 +299,7 @@ function show(guide, state) {
   document.querySelector('nav .here')?.scrollIntoView({ block: 'nearest' });
   document.querySelector('main').scrollTop = 0;
   window.scrollTo(0, 0);
+  if (moved) document.querySelector('main > article:not([hidden]) h1')?.focus({ preventScroll: true });
 }
 
 function update(guide, state) {

@@ -44,7 +44,7 @@ aside { position: fixed; top: 20px; left: 20px; z-index: 5; width: var(--side); 
 .fill { display: block; height: 100%; width: 100%; background: var(--good); transform: scaleX(0); transform-origin: left;
   transition: transform 0.3s var(--ease-out); }
 .labels { display: flex; justify-content: space-between; gap: 12px; margin-top: 7px; }
-.label { margin: 0; font-size: 0.74rem; color: var(--soft); font-weight: 600; }
+.label { margin: 0; padding: 0; border: 0; background: none; font-family: inherit; font-size: 0.74rem; color: var(--soft); font-weight: 600; }
 .label:last-child { text-align: right; }
 .part, .label { transition: opacity 0.2s ease; }
 .part.away { opacity: 0.4; }
@@ -96,7 +96,7 @@ main > article > h1, .section-name, .pictures { flex-shrink: 0; }
 .cautions li::before { content: "⚠"; flex-shrink: 0; }
 .pictures { margin-bottom: 20px; }
 figure { margin: 0; }
-figure img { display: block; width: 100%; max-height: 44vh; object-fit: contain; border-radius: 10px; background: var(--tint); }
+figure img { display: block; width: 100%; max-height: clamp(160px, 100dvh - 500px, 44vh); object-fit: contain; border-radius: 10px; background: var(--tint); }
 figure.map img { border: 1px solid var(--line); }
 figcaption { font-size: 0.85rem; color: var(--faint); margin-top: 6px; display: flex; justify-content: space-between; gap: 12px; }
 .frame { position: relative; }
@@ -127,12 +127,12 @@ th { color: var(--soft); font-weight: 600; }
 .parts ul { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 28px; font-size: 0.92rem; }
 .parts li { break-inside: avoid; }
 .video .play { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
-.video .play img { display: block; width: 100%; max-height: 44vh; object-fit: cover; border-radius: 10px; }
+.video .play img { display: block; width: 100%; max-height: clamp(160px, 100dvh - 500px, 44vh); object-fit: cover; border-radius: 10px; }
 .play-mark { position: absolute; inset: 0; margin: auto; width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 0, 0, 0.6);
   transition: transform 160ms var(--ease-out), background-color 0.15s ease; }
 .play-mark::after { content: ""; position: absolute; left: 26px; top: 20px; border: solid transparent; border-width: 12px 0 12px 19px;
   border-left-color: #fff; }
-.video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; max-height: 44vh; border: 0; border-radius: 10px; background: #000; }
+.video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; max-height: clamp(160px, 100dvh - 500px, 44vh); border: 0; border-radius: 10px; background: #000; }
 .thumbs .is-video { position: relative; }
 .thumbs .is-video::after { content: "▶"; position: absolute; inset: 0; display: grid; place-content: center; color: #fff; font-size: 0.8rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
@@ -142,7 +142,7 @@ th { color: var(--soft); font-weight: 600; }
 .way a { padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 600; }
 .way .back { color: var(--ink); border: 1px solid var(--line); }
 .way .next { color: #fff; background: var(--accent); }
-@media (prefers-color-scheme: dark) { .way .next { color: #0d1430; } }
+@media (prefers-color-scheme: dark) { .way .next, .list-open .steps-toggle { color: #0d1430; } }
 [hidden] { display: none !important; }
 
 /* Controls of its own: ticks as circles in the list, boxes for the choices. */
@@ -153,7 +153,7 @@ input[type=checkbox]::after { content: ""; width: 4px; height: 8px; margin-top: 
   border-width: 0 2px 2px 0; transform: rotate(45deg) scale(0.6); opacity: 0; transition: transform 160ms var(--ease-out), opacity 120ms ease; }
 input[type=checkbox]:checked::after { transform: rotate(45deg) scale(1); opacity: 1; }
 input[type=checkbox]:active { transform: scale(0.95); }
-input:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+input:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex="-1"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .row input { width: 16px; height: 16px; border-radius: 50%; transform: translateY(3px); }
 .row input:active { transform: translateY(3px) scale(0.95); }
 .row input:checked { background: var(--good); border-color: var(--good); }
@@ -211,12 +211,13 @@ figure:not([hidden]) { animation: fade 180ms var(--ease-out) both; }
   .bar { padding: 8px 14px 10px; }
   main { padding: 28px 24px 196px; max-width: none; }
   .code pre { white-space: pre-wrap; word-break: break-all; }
+  figure img, .video .play img, .video iframe { max-height: clamp(140px, 100dvh - 560px, 44vh); }
 }
 @media (max-width: 760px) {
   main { padding: 20px 14px 196px; }
   .step h1 { font-size: 1.35rem; }
   .needs, .parts ul { columns: 1; }
-  figure img, .video .play img, .video iframe { max-height: 34vh; }
+  figure img, .video .play img, .video iframe { max-height: clamp(140px, 100dvh - 560px, 34vh); }
   .labels { display: none; }
 }
 
@@ -236,7 +237,7 @@ nav .row .number { color: var(--faint); font-variant-numeric: tabular-nums; text
 .row.here { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
 .row.here::before { content: ""; position: absolute; left: -2px; top: 7px; bottom: 7px; width: 3px; border-radius: 2px; background: var(--accent); }
 .row.here .number { color: var(--accent); }
-.section-head { color: var(--ink); opacity: 0.55; }
+.section-head { color: var(--soft); }
 .subsection { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; color: var(--faint); margin-top: 16px; }
 
 /* Words, warnings and screws. */
@@ -273,3 +274,11 @@ figure.map img { background: #18181a; border-color: var(--line); }
 }
 @media (prefers-color-scheme: dark) { .way .next { color: #0d1430; } }
 .summary { max-width: 64ch; }
+
+/* Fingers: bigger ticks, rows and buttons in the list. */
+@media (pointer: coarse) {
+  .row { padding: 8px 10px; }
+  .row input { width: 22px; height: 22px; }
+  .steps-toggle { padding: 12px 16px; }
+  .copy { padding: 10px 12px; }
+}
