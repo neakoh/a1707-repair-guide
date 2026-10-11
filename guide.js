@@ -140,7 +140,7 @@ function overviewHTML(guide) {
   return `<article class="step overview" id="overview" hidden>
     <h1 tabindex="-1">${escape(guide.title)}</h1>
     <div class="body">
-    ${guide.summary ? `<p class="summary">${inline(guide.summary)}</p>` : ''}
+    ${guide.summary ? `<div class="summary">${markdown(guide.summary)}</div>` : ''}
     ${guide.needs?.length ? `<h2 class="label-h">You need</h2><ul class="needs">${guide.needs.map(n => `<li>${inline(n)}</li>`).join('')}</ul>` : ''}
     ${guide.cautions?.length ? `<ul class="cautions">${guide.cautions.map(c => `<li>${inline(c)}</li>`).join('')}</ul>` : ''}
     ${guide.publish?.credits?.length ? `<section class="sources"><h2 class="label-h">Sources and credits</h2>

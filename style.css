@@ -274,6 +274,7 @@ figure.map img { background: #18181a; border-color: var(--line); }
 }
 @media (prefers-color-scheme: dark) { .way .next { color: #0d1430; } }
 .summary { max-width: 64ch; }
+.summary p { margin: 0 0 12px; }
 
 /* Fingers: bigger ticks, rows and buttons in the list. */
 @media (pointer: coarse) {
