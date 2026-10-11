@@ -320,7 +320,7 @@ function update(guide, state) {
     section.querySelector('.count').textContent = run ? (done === run.steps.length ? 'done' : `${done} of ${run.steps.length}`) : '';
     const part = document.querySelector(`.bar [data-part="${section.dataset.section}"]`);
     part.hidden = !run;
-    part.querySelector('.fill').style.width = run ? `${(done / run.steps.length) * 100}%` : '0';
+    part.querySelector('.fill').style.transform = `scaleX(${run ? done / run.steps.length : 0})`;
     document.querySelector(`.bar [data-label="${section.dataset.section}"]`).hidden = !run;
   });
   document.querySelector('.progress').textContent = `${finished} of ${total} steps done`;
